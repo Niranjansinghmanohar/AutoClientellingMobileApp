@@ -1,0 +1,128 @@
+{
+  "096c2d72-0b60-4c02-9d6b-bb4b620c2f8f": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/20ff6c7cef2c4b30aec08cb377bc0d8b",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Excel",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/excel/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excel",
+      "parameterHints": {
+        "9a404dc4-e29d-4f54-b6af-84a095de3602": {
+          "value": "fileSource"
+        }
+      },
+      "parameterHintsV2": {
+        "fileSource": {
+          "value": "9a404dc4-e29d-4f54-b6af-84a095de3602"
+        }
+      }
+    },
+    "datasets": {
+      "b!DZA9F7anhk2BWCvu6LOmmGIwy0gHIOFFpS7Mq3Zyj6kNlcTE6cARSINUZKQtkH4s.01HPYAO6SLCEQ2ELTPU5D3VR7ZO4I2BZ7O": {
+        "dataSources": {
+          "Table1": {
+            "tableName": "Table1"
+          },
+          "Table2": {
+            "tableName": "Table2"
+          },
+          "Table3": {
+            "tableName": "Table3"
+          },
+          "Table5": {
+            "tableName": "Table5"
+          },
+          "Table6": {
+            "tableName": "Table6"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Table2",
+      "Table1",
+      "Table3",
+      "Table5",
+      "Table6"
+    ],
+    "dependencies": {
+      "fileSource": "9a404dc4-e29d-4f54-b6af-84a095de3602"
+    },
+    "dependents": [],
+    "id": "096c2d72-0b60-4c02-9d6b-bb4b620c2f8f"
+  },
+  "58a662c3-2c1a-4ccb-8144-070ef69b6192": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_microsoftspatialservices/connections/212ecaa8c43e4cfcb227347f7b6d1b69",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Premium",
+      "displayName": "Spatial Services",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1539/1.0.1539.2620/microsoftspatialservices/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_microsoftspatialservices",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "SpatialServices"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "58a662c3-2c1a-4ccb-8144-070ef69b6192"
+  },
+  "9a404dc4-e29d-4f54-b6af-84a095de3602": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/shared-onedriveforbu-62c052ef-84f4-4b0d-994c-e52497110ec2",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "OneDrive for Business",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2665/onedriveforbusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "096c2d72-0b60-4c02-9d6b-bb4b620c2f8f"
+    ],
+    "id": "9a404dc4-e29d-4f54-b6af-84a095de3602"
+  },
+  "be86ba30-8786-4cb7-8789-45cd79381d93": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0775b15504b34c2eac8b2ace20f15447",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://bajajdemo858.sharepoint.com/sites/BajajDemo": {
+        "dataSources": {
+          "BajajDemo3DFiles": {
+            "tableName": "8688ac47-a7b8-4945-84a6-b2afe630c4b1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "BajajDemo3DFiles"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "be86ba30-8786-4cb7-8789-45cd79381d93"
+  }
+}

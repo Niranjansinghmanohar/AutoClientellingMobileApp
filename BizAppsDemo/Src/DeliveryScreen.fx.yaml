@@ -1,0 +1,522 @@
+DeliveryScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Rectangle1_18 As rectangle:
+        Height: =83
+        Width: =640
+        ZIndex: =1
+
+    Icon1_13 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_20 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =73
+        Size: =20
+        Text: ="DELIVERY CHECKLIST"
+        Width: =400
+        X: =120
+        Y: =4
+        ZIndex: =4
+
+    Form10 As form:
+        AcceptsFocus: =false
+        DataSource: =Opportunities
+        Height: =983
+        Item: =BookingFocusVal
+        Width: =640
+        Y: =83
+        ZIndex: =5
+
+        "'Actual Close Date_DataCard1' As typedDataCard.dateEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="actualclosedate"
+            Default: =ThisItem.'Actual Close Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"actualclosedate")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue69.SelectedDate
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey75 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: ="Actual Delivery Date"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue69 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Height: =80
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =306
+                X: =333
+                ZIndex: =2
+
+            ErrorMessage75 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue69.Y + DataCardValue69.Height
+                ZIndex: =3
+
+            StarVisible75 As label:
+                Align: =Align.Center
+                Height: =DataCardKey75.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey75.Y
+                ZIndex: =4
+
+        "'Battery Warranty Card_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_batterywarrantycard"
+            Default: =ThisItem.'Battery Warranty Card'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_batterywarrantycard")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =107
+            Required: =true
+            Update: |-
+                =//DataCardValue71.Selected.Value
+                If(Toggle2.Value,'Battery Warranty Card (Opportunities)'.Yes,'Battery Warranty Card (Opportunities)'.No)
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey77 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage77 As label:
+                Height: =36
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Toggle2.Y + Toggle2.Height
+                ZIndex: =3
+
+            StarVisible77 As label:
+                Align: =Align.Center
+                Height: =DataCardKey77.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey77.Y
+                ZIndex: =4
+
+            Toggle2 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
+        "'Recommended Tyre Pressure_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_recommendedtyrepressure"
+            Default: =ThisItem.'Recommended Tyre Pressure'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_recommendedtyrepressure")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =91
+            Required: =true
+            Update: |-
+                =//DataCardValue72.Selected.Value
+                If(Toggle2_1.Value,'Recommended Tyre Pressure (Opportunities)'.Yes,'Recommended Tyre Pressure (Opportunities)'.No)
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey78 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage78 As label:
+                Height: =36
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Toggle2_1.Y + Toggle2_1.Height
+                ZIndex: =3
+
+            StarVisible78 As label:
+                Align: =Align.Center
+                Height: =DataCardKey78.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey78.Y
+                ZIndex: =4
+
+            Toggle2_1 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
+        "'Warranty/Service Schedule Explained_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_warrantyservicescheduleexplained"
+            Default: =ThisItem.'Warranty/Service Schedule Explained'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_warrantyservicescheduleexplained")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =154
+            Required: =true
+            Update: |-
+                =//DataCardValue73.Selected.Value
+                If(Toggle2_2.Value,'Warranty/Service Schedule Explained (Opportunities)'.Yes,'Warranty/Service Schedule Explained (Opportunities)'.No)
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey79 As label:
+                Height: =97
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =393
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage79 As label:
+                Height: =36
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: |-
+                    =//DataCardValue73.Y + DataCardValue73.Height
+                    Toggle2_2.Y + Toggle2_2.Height
+                ZIndex: =3
+
+            StarVisible79 As label:
+                Align: =Align.Center
+                Height: =DataCardKey79.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey79.Y
+                ZIndex: =4
+
+            Toggle2_2 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =34
+                ZIndex: =5
+
+        "'First Aid Kit / Tool Kit_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_firstaidkittoolkit"
+            Default: =ThisItem.'First Aid Kit / Tool Kit'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_firstaidkittoolkit")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =123
+            Required: =true
+            Update: |-
+                =//DataCardValue77.Selected.Value
+                If(Toggle2_3.Value,'First Aid Kit / Tool Kit (Opportunities)'.Yes,'First Aid Kit / Tool Kit (Opportunities)'.No)
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey83 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage83 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Toggle2_3.Y + Toggle2_3.Height
+                ZIndex: =3
+
+            StarVisible83 As label:
+                Align: =Align.Center
+                Height: =DataCardKey83.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey83.Y
+                ZIndex: =4
+
+            Toggle2_3 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
+        "'Delivery Completed?_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_deliverycompleted"
+            Default: =ThisItem.'Delivery Completed?'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_deliverycompleted")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =124
+            Required: =true
+            Update: |-
+                =//DataCardValue70.Selected.Value
+                If(Toggle2_4.Value,'Delivery Completed? (Opportunities)'.Yes,'Delivery Completed? (Opportunities)'.No)
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =1
+
+            DataCardKey76 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage76 As label:
+                Height: =43
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Toggle2_4.Y + Toggle2_4.Height
+                ZIndex: =3
+
+            StarVisible76 As label:
+                Align: =Align.Center
+                Height: =DataCardKey76.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey76.Y
+                ZIndex: =4
+
+            Toggle2_4 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =9
+                ZIndex: =5
+
+        "'Delivery Status_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_deliverystatus"
+            Default: =ThisItem.'Delivery Status'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_deliverystatus")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue78.Selected.Value
+            Visible: =false
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            DataCardKey84 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue78 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =['Delivery Status (Opportunities)'.Completed]
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                IsSearchable: =false
+                Items: =Choices('Delivery Status (Opportunities)')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey84.Y + DataCardKey84.Height + 5
+                ZIndex: =2
+
+            ErrorMessage84 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue78.Y + DataCardValue78.Height
+                ZIndex: =3
+
+            StarVisible84 As label:
+                Align: =Align.Center
+                Height: =DataCardKey84.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey84.Y
+                ZIndex: =4
+
+    Button17 As button:
+        DisplayMode: =If((Toggle2.Value && Toggle2_1.Value && Toggle2_2.Value && Toggle2_3.Value && Toggle2_4.Value), DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =70
+        OnSelect: |
+            =SubmitForm(Form10);
+            If(
+                IsEmpty(Errors(Opportunities)),
+                Notify(
+                    "Delivery completed. Please capture customer signature",
+                    NotificationType.Success
+                );ResetForm(Form11);Navigate(DeliveryConfirmationScreen),
+                Notify(
+                    First(Errors(Opportunities)).Message,
+                    NotificationType.Error
+                )
+            );
+        Size: =24
+        Text: ="Next"
+        Width: =640
+        Y: =1066
+        ZIndex: =6
+

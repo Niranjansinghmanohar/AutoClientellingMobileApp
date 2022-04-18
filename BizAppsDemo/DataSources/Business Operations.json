@@ -1,0 +1,127 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msauto_businessoperations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msauto_businessoperation",
+    "MaxGetRowsCount": 500,
+    "Name": "Business Operations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msauto_Account": "Account",
+      "msauto_addresscity": "Address: City",
+      "msauto_addresscountry": "Address: Country",
+      "msauto_addresscounty": "Address: County",
+      "msauto_addresslatitude": "Address: Latitude",
+      "msauto_addresslongitude": "Address: Longitude",
+      "msauto_addressname": "Address: Name",
+      "msauto_addresspostalcode": "Address: ZIP/Postal Code",
+      "msauto_addressstateprovince": "Address: State/Province",
+      "msauto_addressstreet1": "Address: Street 1",
+      "msauto_addressstreet2": "Address: Street 2",
+      "msauto_addressstreet3": "Address: Street 3",
+      "msauto_businessoperation_AsyncOperations": "System Jobs",
+      "msauto_businessoperation_BulkDeleteFailures": "Bulk Delete Failures",
+      "msauto_businessoperation_DuplicateBaseRecord": "Duplicate Records (msauto_businessoperation_DuplicateBaseRecord)",
+      "msauto_businessoperation_DuplicateMatchingRecord": "Duplicate Records (msauto_businessoperation_DuplicateMatchingRecord)",
+      "msauto_businessoperation_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msauto_businessoperation_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msauto_businessoperation_ProcessSession": "Process Sessions",
+      "msauto_businessoperation_SyncErrors": "Sync Errors",
+      "msauto_businessoperationid": "Business Operation",
+      "msauto_description": "Description",
+      "msauto_FacilityId": "Facility",
+      "msauto_msauto_businessoperation_lead_BusinessOperationId": "Leads (msauto_msauto_businessoperation_lead_BusinessOperationId)",
+      "msauto_msauto_businessoperation_lead_SourceBusinessOperationId": "Leads (msauto_msauto_businessoperation_lead_SourceBusinessOperationId)",
+      "msauto_msauto_businessoperation_msauto_aggregatekpicontext_BusinessOperationId": "Aggregate KPI Contexts",
+      "msauto_msauto_businessoperation_msauto_businessoperationcustomerpreference_BusinessOperationId": "Business Operation Customer Preferences",
+      "msauto_msauto_businessoperation_msauto_deal_BusinessOperationId": "Deals",
+      "msauto_msauto_businessoperation_msauto_dealerplate_BusinessOperationId": "Dealer Plates",
+      "msauto_msauto_businessoperation_msauto_device_BusinessOperationId": "Devices",
+      "msauto_msauto_businessoperation_msauto_fleet_BusinessOperationId": "Fleets",
+      "msauto_msauto_businessoperation_msauto_serviceappointment_BusinessOperationId": "Service Appointments",
+      "msauto_msauto_businessoperation_msauto_serviceorder_BusinessOperationId": "Service Orders",
+      "msauto_msauto_businessoperation_msauto_serviceorderjobdetail_BusinessOperationId": "Service Order Job Details",
+      "msauto_msauto_businessoperation_msauto_testdrive_BusinessOperationId": "Test Drives",
+      "msauto_name": "Name",
+      "msauto_OperationTypeId": "Operation Type",
+      "new_msauto_businessoperation_lead_Dealer": "Leads (new_msauto_businessoperation_lead_Dealer)",
+      "new_msauto_businessoperation_opportunity_DealerN": "Opportunities",
+      "new_msauto_businessoperation_quote_Dealer": "Quotes",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Business Operations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Business Operations (Views)",
+    "Name": "_msauto_businessoperation_views",
+    "RelatedEntityName": "Business Operations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1ee112c9-441b-422b-9079-903f2b505354": "Business Operation Advanced Find View",
+      "352f46be-1718-4a93-b9fc-7c2323eb9533": "Inactive Business Operations",
+      "63d68f65-f1f7-495f-b3d0-fe82c2cdd221": "Business Operation Lookup View",
+      "95e2f5ab-b9e1-4048-b908-67ebcf6dae96": "Business Operation Associated View",
+      "b0163b5b-0212-4de3-bff7-d35db5a8bdbf": "Active Business Operations"
+    }
+  },
+  {
+    "DisplayName": "Status (Business Operations)",
+    "Name": "msauto_businessoperation_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Business Operations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Business Operations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Business Operations)",
+    "Name": "msauto_businessoperation_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Business Operations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Business Operations",
+    "Type": "OptionSetInfo"
+  }
+]

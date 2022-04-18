@@ -1,0 +1,231 @@
+EditTestDrive As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: =Set(ShowCompleteButton,false);
+
+    Rectangle1_5 As rectangle:
+        Height: =89
+        Width: =640
+        ZIndex: =1
+
+    Icon1_5 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(TestDriveScreen)
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_5 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =62
+        Size: =20
+        Text: ="RIDE DETAILS"
+        Width: =281
+        X: =179
+        Y: =11
+        ZIndex: =7
+
+    "Map2 As 'Map (preview)'.pcfdataset":
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DefaultLatitude: =19.0283595
+        DefaultLocation: =false
+        DefaultLongitude: =72.8338639
+        DefaultZoomLevel: =12
+        DisplayMode: =DisplayMode.Edit
+        Height: =648
+        Items: =
+        MapStyle: ="Road"
+        PinColor: =RGBA(29, 114, 169, 1)
+        RouteMaintainOrder: =true
+        RouteWaypoints_Items: |-
+            =Table(
+                {
+                    Name: "Start",
+                    Latitude: "19.0283595",
+                    Longitude: "72.8338639"
+                },
+                {
+                    Name: "End",
+                    Latitude: "18.9983384",
+                    Longitude: "72.8111068"
+                }
+            )
+        RouteWaypointsLatitudes: ="Latitude"
+        RouteWaypointsLongitudes: ="Longitude"
+        UseRouting: =true
+        Width: =615
+        X: =13
+        Y: =345
+        ZIndex: =13
+
+    Label6 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Size: =21
+        Text: |-
+            =With(
+                {
+                    varTravelTime: Time(
+                        0,
+                        0,
+                        Map2.RouteDirection.TravelTimeInSeconds
+                    )
+                },
+                With(
+                    {
+                        varHours: Hour(varTravelTime),
+                        varMinutes: Mod(
+                            Minute(varTravelTime),
+                            60
+                        )
+                    },
+                    Coalesce(
+                        Concatenate(
+                            If(
+                                varHours <> 0,
+                                Text(
+                                    varHours,
+                                    "0"
+                                ) & " hr "
+                            ),
+                            If(
+                                varMinutes <> 0,
+                                Text(
+                                    varMinutes,
+                                    "0"
+                                ) & " min"
+                            )
+                        ),
+                        "0 hr"
+                    )
+                )
+            )
+        Width: =338
+        X: =285
+        Y: =222
+        ZIndex: =14
+
+    Label6_1 As label:
+        Height: =54
+        Size: =21
+        Text: |-
+            ="Estimated Duration: "
+        Width: =272
+        X: =13
+        Y: =222
+        ZIndex: =15
+
+    Label6_2 As label:
+        Height: =54
+        Size: =21
+        Text: |-
+            ="Estimated Distance: "
+        Width: =272
+        X: =13
+        Y: =276
+        ZIndex: =16
+
+    Label6_3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Size: =21
+        Text: |-
+            =With(
+                 {
+                    varLengthMeters: Map2.RouteDirection.LengthInMeters
+                },
+                If(
+                    varLengthMeters>1000000, Text(varLengthMeters/1000, "#,##0")&" km",
+                    varLengthMeters>0, Text(varLengthMeters/1000, "#,##0.0")&" km",
+                    Text(varLengthMeters, "0")&" m"
+                )
+            )
+        Width: =339
+        X: =284
+        Y: =276
+        ZIndex: =17
+
+    Button3 As button:
+        DisplayMode: =If(IsBlank(LookUp('Test Drives','Test Drive'=EditTestDriveItem.'Test Drive').'Actual Start'),DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =70
+        OnSelect: |
+            =Patch(
+                'Test Drives',
+                Gallery2_1.Selected,
+                {'Actual Start': Now()}
+            );
+            Refresh('Test Drives');
+            If(
+                IsEmpty(Errors('Test Drives')),
+                Notify(
+                    "Test drive started",
+                    NotificationType.Success
+                ),
+                Notify(
+                    First(Errors('Test Drives')).Message,
+                    NotificationType.Error
+                )
+            );
+            Set(ShowCompleteButton,true);
+        Size: =24
+        Text: ="Start"
+        Width: =280
+        X: =13
+        Y: =1022
+        ZIndex: =18
+
+    Button3_1 As button:
+        DisplayMode: =If(!IsBlank(LookUp('Test Drives','Test Drive'=EditTestDriveItem.'Test Drive').'Actual Start') || ShowCompleteButton,DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =70
+        OnSelect: =Navigate(CompleteTestDrive1);
+        Size: =24
+        Text: ="Complete"
+        Width: =280
+        X: =343
+        Y: =1022
+        ZIndex: =19
+
+    Label6_4 As label:
+        Height: =54
+        Size: =21
+        Text: |-
+            ="Model: "
+        Width: =272
+        X: =13
+        Y: =168
+        ZIndex: =20
+
+    Label6_5 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Size: =21
+        Text: =LookUp('Test Drives','Test Drive'= EditTestDriveItem.'Test Drive','Device Model'.Name)
+        Width: =344
+        X: =285
+        Y: =168
+        ZIndex: =21
+
+    Label6_6 As label:
+        Height: =54
+        Size: =21
+        Text: |-
+            ="Customer: "
+        Width: =272
+        X: =13
+        Y: =114
+        ZIndex: =22
+
+    Label6_7 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =54
+        Size: =21
+        Text: =LookUp('Test Drives','Test Drive'= EditTestDriveItem.'Test Drive', Contact.'Full Name')
+        Width: =344
+        X: =284
+        Y: =114
+        ZIndex: =23
+

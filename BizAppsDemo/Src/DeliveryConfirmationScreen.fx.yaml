@@ -1,0 +1,187 @@
+DeliveryConfirmationScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Rectangle1_19 As rectangle:
+        Height: =83
+        Width: =640
+        ZIndex: =1
+
+    Icon1_16 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_21 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =73
+        Size: =20
+        Text: ="DELIVERY CONFIRMATION"
+        Width: =400
+        X: =120
+        Y: =4
+        ZIndex: =4
+
+    Button17_1 As button:
+        DisplayMode: =If(Form11.Valid, DisplayMode.Edit, DisplayMode.Disabled)
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =70
+        OnSelect: |
+            =SubmitForm(Form11);
+            If(
+                IsEmpty(Errors(Opportunities)),
+                Notify(
+                    "Feedback captured",
+                    NotificationType.Success
+                ),
+                Notify(
+                    First(Errors(Opportunities)).Message,
+                    NotificationType.Error
+                )
+            );
+            Navigate(BookingScreen);
+        Size: =24
+        Text: ="Submit"
+        Width: =640
+        Y: =1066
+        ZIndex: =6
+
+    Form11 As form:
+        AcceptsFocus: =false
+        DataSource: =Opportunities
+        Height: =950
+        Item: =BookingFocusVal
+        Width: =640
+        Y: =83
+        ZIndex: =7
+
+        "'Rate your delivery experience_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_rateyourdeliveryexperience"
+            Default: =ThisItem.'Rate your delivery experience'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_rateyourdeliveryexperience")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =266
+            Required: =true
+            Update: =Rating2.Value
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey90 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage90 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Rating2.Y + Rating2.Height
+                ZIndex: =3
+
+            StarVisible90 As label:
+                Align: =Align.Center
+                Height: =DataCardKey90.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey90.Y
+                ZIndex: =4
+
+            Rating2 As rating:
+                Default: =1
+                DisabledFill: =Self.Fill
+                DisplayMode: =DisplayMode.Edit
+                FocusedBorderColor: =Self.BorderColor
+                Height: =130
+                HoverFill: =Self.Fill
+                PressedFill: =Self.Fill
+                Width: =580
+                X: =30
+                Y: =100
+                ZIndex: =5
+
+        "'Delivery Confirmation Signature_DataCard1' As typedDataCard.textualMultiLineEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_deliveryconfirmationsignature"
+            Default: =ThisItem.'Delivery Confirmation Signature'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_deliveryconfirmationsignature")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =429
+            Required: =true
+            Update: =PenInput2.RecognizedText
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey89 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage89 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =PenInput2.Y + PenInput2.Height
+                ZIndex: =3
+
+            StarVisible89 As label:
+                Align: =Align.Center
+                Height: =DataCardKey89.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey89.Y
+                ZIndex: =4
+
+            PenInput2 As inkControl:
+                Height: =326
+                Width: =580
+                X: =30
+                Y: =73
+                ZIndex: =5
+

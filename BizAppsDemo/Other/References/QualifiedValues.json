@@ -1,0 +1,179 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_lead_forms",
+      "Namespace": "Leads (Forms)",
+      "Values": {
+        "App for Outlook Lead Card": "d228d73e-e56e-48b3-ab95-0a06b1397b03",
+        "App for Outlook Lead Quick View": "95192c4e-f96e-4771-b10a-e6421c908533",
+        "Contact Us Personal Web Form": "c56e369e-3aa0-40b4-a886-fb4b4b6ca222",
+        "Contact Us Personal Web Form - Japanese": "0c179ae9-ca30-4020-8a4a-09a53f81614a",
+        "In Context Form": "e7d96c74-2d77-47b7-9a55-c5d26eb7074c",
+        "Information": "f4c6ba0a-3e70-4750-b569-30a79d8fb077",
+        "Insights": "7c6143aa-66b1-40c8-8e97-eba24d96bb32",
+        "Join Web Form": "3a342bae-c3cf-450a-b145-8a7a8bd1b6a2",
+        "Lead": "e3b6ddb7-8df0-4410-ac7b-fd32e5053d38",
+        "Lead - Auto": "141396eb-44e2-43f3-9aac-2f2f7d3b6c04",
+        "Lead Insights": "e160d172-172b-4619-9799-81bb007ecc54",
+        "Lead Quick Create": "aa7c154f-e2f8-45db-b780-a9a8a96332fe",
+        "Lead Quick View Form - submissions": "89e0d275-331f-4a59-860d-f3c15c783041",
+        "Leads Dashboard": "9a14ebb4-143e-e711-80e1-00155d871bb4",
+        "Sales Insights": "e1ec2c0c-1744-42fa-a346-fb8237357d0f",
+        "Test Drives - QV Form": "6ed207ac-a7c4-4c2e-b1ba-afa300ff2fd4",
+        "Web Form": "a4b9a944-d016-4525-af77-08aa84308307",
+        "Web Form - Japanese": "936747d7-deb8-40ab-a462-6473293d1c71"
+      }
+    },
+    {
+      "Kind": "default.cds_msauto_testdrive_forms",
+      "Namespace": "Test Drives (Forms)",
+      "Values": {
+        "Information": "c4146334-02fb-4b29-b18b-f80f8b346d84",
+        "SelectModel": "33a0d564-cbbc-4ff8-9ee1-5f85eb41816b",
+        "Web - Create Test Drive": "616a4418-061d-ea11-a811-000d3a579ca7",
+        "Web - Purchase Scenario": "302dfa1a-ce4c-4568-a801-267822a6bded",
+        "Web - Test Drive Steps": "e25520f6-c872-48f6-aad0-587374ce0f80",
+        "Web - View Test Drive": "9850415e-49fb-4c1e-adf1-bd806f734670"
+      }
+    },
+    {
+      "Kind": "default.cds_msauto_devicemodel_forms",
+      "Namespace": "Device Models (Forms)",
+      "Values": {
+        "Information": "2aca7886-7a55-4b56-896e-e3ead1cec5cf"
+      }
+    },
+    {
+      "Kind": "default.cds_msauto_businessoperation_forms",
+      "Namespace": "Business Operations (Forms)",
+      "Values": {
+        "Information": "9fba6f8b-7ee6-4993-88f7-c2c1fd019f00"
+      }
+    },
+    {
+      "Kind": "default.cds_contact_forms",
+      "Namespace": "Contacts (Forms)",
+      "Values": {
+        "account contact card": "29de27bc-a257-4f29-99cf-bab4a84e688f",
+        "Account quick view form": "3ace4e34-9f50-4e73-ae49-b595d6b48fa4",
+        "App for Outlook Contact Card": "cdbb9298-3b2e-41f3-8f4a-0168d6b09fc4",
+        "App for Outlook Contact Quick View": "3d22ab88-96c8-4b3f-a533-d4827e2925c9",
+        "Cases for Customer": "5194a156-576a-4fa1-bf1a-abf7a41b0e8c",
+        "ChangePassword": "01707dcb-aeca-4b87-a9e4-a5b199a54ece",
+        "Contact": "1fed44d1-ae68-4a41-bd2b-f13acac4acfa",
+        "Contact - Auto": "c1c72637-5032-40f8-bdea-ca71e9c33a76",
+        "Contact - Mobile": "28b5b9b6-dfa2-45d6-8a81-3f6ba02a098a",
+        "contact card": "707fc57b-c5e6-471b-a180-e37ed28a38e2",
+        "Contact Card form": "bc0f68dd-a4b1-4a8f-bed3-c8f5db2f89cf",
+        "Contact company view": "5efdc20d-5ae6-47d2-b4ed-8a929d089d7a",
+        "Contact for Interactive experience": "cc760212-3eab-4009-b5c3-ea9cf6f3e141",
+        "Contact for Multisession experience": "e06af4d1-2812-45c7-a9c2-9fb73fee7bec",
+        "Contact Quick Create": "661157fe-2fc9-4eaa-835f-5bfa2f7b64f7",
+        "Contact Quick Create - Field Service": "477d15ad-60b2-4d8e-9508-b3d2b87c9868",
+        "Contact Quick Form": "bdb0ae1c-32fa-4374-b637-8dafe107bc44",
+        "Contact quick view form on event team member": "5d904496-1ba1-4724-a582-f46732305a7f",
+        "Contact Reference Panel": "d880c3cf-80e2-42f3-82f9-24d040d09f17",
+        "Contacts Dashboard": "70ad8b15-e3f3-4d7d-9e4b-16cb4e51b484",
+        "Customer profile": "05ea391a-d034-43fe-849b-b4fa3213a2b2",
+        "In Context Form": "4c9c89b9-f909-4b34-8f63-b87d7ff2f0c4",
+        "Information": "894cc46a-b0cb-4ab0-8bf6-200544e46a2d",
+        "Insights": "7b78aae4-7945-4515-848b-1f86535846d6",
+        "Invite Web Form": "d6190b35-9474-4098-9698-33f6627eb3bf",
+        "Live Persona Card Form": "449faa0e-f471-48ec-87d0-4719909546d2",
+        "Portal Contact": "3fb651a5-cdbf-46c9-87fb-d2c748662bb8",
+        "Portal Contact for Interactive experience": "49d062e4-d892-4baa-af50-6387989ac638",
+        "Profile Web Form": "0bd832d5-9d6a-456d-bdc1-21129e82cc0f",
+        "Profile Web Form - Japanese": "36cc830c-eeab-4a89-a7c9-da2ac6c451a1",
+        "Recent Cases and Entitlements": "f3b707fb-3b5f-45f9-9c6b-5e573bb5d19e",
+        "Sales Insights": "293c878f-f068-40a0-ae48-4297e060871c",
+        "Social Profiles": "7bb87dfd-ec3e-4ed9-8e3e-5725d3067295",
+        "TimelineWallControl - Contact - Main": "986258b5-2985-4ae0-970a-5e1d108ab793",
+        "Update Contact": "26843818-6508-4afe-9342-5fae2ebf15ca"
+      }
+    },
+    {
+      "Kind": "default.cds_organization_forms",
+      "Namespace": "Organizations (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_new_state_forms",
+      "Namespace": "States (Forms)",
+      "Values": {
+        "Information": "3b6002fc-3b53-4345-bc03-b2b73193d455"
+      }
+    },
+    {
+      "Kind": "default.cds_new_city_forms",
+      "Namespace": "Cities (Forms)",
+      "Values": {
+        "Information": "15b53898-3a31-4bdb-a309-fdbd877d773d"
+      }
+    },
+    {
+      "Kind": "default.cds_task_forms",
+      "Namespace": "Tasks (Forms)",
+      "Values": {
+        "Information": "b62ce022-cc0f-4c8c-bb29-21948f70dc74",
+        "Quick Form": "1fac7e2e-0b1c-4b6c-ab92-8af0f92dbdbc",
+        "Task": "16654191-19ad-48ca-9e46-c4b4fbdad76f",
+        "Task card": "e9c378d3-27a7-43fe-8075-322dcd7ff380",
+        "Task Card form": "5e9725e4-5449-4363-8c1c-5ae71767af34",
+        "Task for Interactive experience": "d5b4a1b2-de4f-4f86-8768-b0730001e7d1",
+        "Task quick create form.": "a1c8a6dc-8804-4019-9c78-7dbe86560ea1",
+        "Task Reference Panel": "81a89014-442c-44ad-9725-4077426a7fee"
+      }
+    },
+    {
+      "Kind": "default.cds_phonecall_forms",
+      "Namespace": "Phone Calls (Forms)",
+      "Values": {
+        "Information": "dcfacadb-b9dd-44ff-b8a7-cd52179c92dc",
+        "Phone Call": "a91390a5-99bb-4d10-9eee-3a5c87f841f1",
+        "Phone Call Card form": "983dc188-2a05-4cfe-b907-4fbfae8c21f7",
+        "Phone Call for Interactive experience": "cdc622ea-2a17-4cc3-9605-44564d56cea7",
+        "Phone call quick create form.": "a80fb36c-353f-4310-a4cb-b8fa47d58b9b",
+        "Phone Call Reference Panel": "c466c56a-ab9d-41a3-ac68-008a60bfe67e",
+        "Phonecall card": "fbefc534-019c-472b-96d1-c3514d056297",
+        "Quick Form": "8e0b7c1e-f5a0-4e7d-b04d-4ca8d5c5ca80"
+      }
+    },
+    {
+      "Kind": "default.cds_appointment_forms",
+      "Namespace": "Appointments (Forms)",
+      "Values": {
+        "After Meeting": "7f58467b-ab43-447c-ab95-29deea3b1e35",
+        "Appointment": "549a8aa3-c349-4ab9-8bac-4873fa9a7a5c",
+        "Appointment Card form": "656cc4ad-235b-495b-8cb9-6174f9b09321",
+        "Appointment for Interactive experience": "230cd27c-0ce0-4b52-9fe5-d7a5ed94ba4e",
+        "Appointment quick create form.": "5895e983-598b-4834-80f9-68a4e9f4f744",
+        "Appointment Reference Panel": "4cd45c5d-29b3-48d3-997a-2bc3f8beeba8",
+        "Information": "fcfde47d-4951-4fea-bcd9-e5b5d673911f",
+        "Wizard": "3a7d8836-e2d7-4bc3-919b-cc86a8d9688a"
+      }
+    },
+    {
+      "Kind": "default.cds_opportunity_forms",
+      "Namespace": "Opportunities (Forms)",
+      "Values": {
+        "Auto Opportunity": "79182bb6-9553-4350-b7f0-01948ba141d8",
+        "Field Service Information": "8335a04b-dc80-44b0-83ab-11ed80f93d3e",
+        "Follow up with Opportunity": "a769690f-c29a-4495-8f06-1349f81de627",
+        "In Context Form": "ba7f7ad7-e0e7-43aa-be19-5069dd9c60eb",
+        "Information": "a2a56263-ec37-4991-a3b0-e7b37a71d818",
+        "Opportunities Dashboard": "f7e6d29b-1e3e-e711-80e1-00155d871bb4",
+        "Opportunity": "a837e4a7-01b8-4f82-a475-be9abd67e667",
+        "Project Information": "2e5bb425-abef-4661-9ed7-df5cb28f2ed4",
+        "Quick Opportunity View Form": "24b5ce86-1811-44c3-b1ad-90f7ea02d2d7",
+        "Sales Insights": "595978a6-704c-4aec-aab8-34f3927c1cda"
+      }
+    },
+    {
+      "Kind": "default.cds_bulkdeleteoperation_forms",
+      "Namespace": "Bulk Delete Operations (Forms)",
+      "Values": {
+        "Information": "cf6efbf9-bff7-463c-a476-24496ac96b69"
+      }
+    }
+  ]
+}

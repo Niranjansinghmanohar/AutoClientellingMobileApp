@@ -1,0 +1,191 @@
+TestDriveScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Rectangle1_3 As rectangle:
+        Height: =73
+        Width: =640
+        ZIndex: =1
+
+    Icon1_3 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(MenuScreen)
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    "Gallery2_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =867
+        Items: =Sort(Filter('Test Drives','Test Drives (Views)'.'Active Test Drives'),'Modified On',Descending)
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Y: =152
+        ZIndex: =6
+
+        Image7_1 As image:
+            Height: =128
+            Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=ThisItem.msauto_DeviceModelId.msauto_name)).ImageURL)),First(Filter(Table2,VariantName=ThisItem.msauto_DeviceModelId.msauto_name)).ImageURL,'default-profile-icon-24')
+            ImagePosition: =ImagePosition.Fill
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Separator2_1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Icon6 As icon.CalendarBlank:
+            Height: =30
+            Icon: =Icon.CalendarBlank
+            OnSelect: =Select(Parent)
+            Width: =30
+            X: =182
+            Y: =16
+            ZIndex: =6
+
+        ScheduledAt As label:
+            Height: =30
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: =Text(ThisItem.'Scheduled Start',DateTimeFormat.LongDateTime)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =415
+            X: =225
+            Y: =16
+            ZIndex: =7
+
+        Icon7 As icon.OfficeBuilding:
+            Height: =45
+            Icon: =Icon.Location
+            Width: =30
+            X: =182
+            Y: =46
+            ZIndex: =8
+
+        Label17 As label:
+            Height: =45
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Business Operation'.Name
+            Width: =377
+            X: =225
+            Y: =46
+            ZIndex: =9
+
+        Icon8 As icon.Information:
+            Height: =30
+            Icon: =Icon.Information
+            OnSelect: =Select(Parent)
+            Width: =30
+            X: =182
+            Y: =110
+            ZIndex: =10
+
+        Label4_3 As label:
+            Color: =If(ThisItem.'Test Drive Status'='Test Drive Status'.Completed,DarkGreen, Red)
+            FontWeight: =FontWeight.Semibold
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.'Test Drive Status'
+            Width: =232
+            X: =225
+            Y: =102
+            ZIndex: =11
+
+        Label18 As label:
+            Align: =Align.Right
+            Height: =42
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: =ThisItem.'Device Model'.Name
+            Width: =247
+            X: =355
+            Y: =102
+            ZIndex: =12
+
+        Icon9 As icon.ChevronRight:
+            DisplayMode: =If(ThisItem.'Test Drive Status' = 'Test Drive Status'.Completed,DisplayMode.Disabled,DisplayMode.Edit)
+            Height: =56
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent);Set(EditTestDriveItem,ThisItem);Navigate(EditTestDrive);
+            Width: =38
+            X: =590
+            Y: =46
+            ZIndex: =13
+
+    Label4_2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =62
+        Size: =20
+        Text: ="TEST RIDES"
+        Width: =281
+        X: =179
+        Y: =11
+        ZIndex: =7
+
+    Icon4_1 As icon.Add:
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =79
+        Icon: =Icon.Add
+        OnSelect: =Set(TestDriveLeadParam,Blank());Set(TestDriveContactParam,Blank());ResetForm(Form2);Navigate(AddNewTestRideScreen);
+        Tooltip: ="Add new Lead"
+        Width: =116
+        X: =523
+        Y: =73
+        ZIndex: =8
+
+    "Gallery4_2 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =117
+        Items: =MenuItems
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Height + 10
+        Y: =1019
+        ZIndex: =9
+
+        Image5_2 As image:
+            Height: =Parent.TemplateHeight/2
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth/2
+            X: =Parent.TemplateWidth/4
+            Y: =Parent.TemplateHeight/5
+            ZIndex: =1
+
+        Label7_2 As label:
+            Align: =Align.Center
+            Height: =Parent.TemplateHeight*0.2
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =Parent.TemplateWidth
+            X: |
+                =0
+            Y: =93.6
+            ZIndex: =2
+
+    "Gallery12 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =79
+        Items: =CustomGallerySample
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Width/2
+        Width: =510
+        X: =13
+        Y: =73
+        ZIndex: =10
+

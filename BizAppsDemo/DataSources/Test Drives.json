@@ -1,0 +1,228 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msauto_testdrives",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msauto_testdrive",
+    "MaxGetRowsCount": 500,
+    "Name": "Test Drives",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_msauto_customerid_value": "Customer",
+      "_ownerid_value": "Owner",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msauto_actualduration": "Actual Duration",
+      "msauto_actualend": "Actual End",
+      "msauto_actualstart": "Actual Start",
+      "msauto_AppointmentId": "Appointment",
+      "msauto_BusinessFacilityId": "Business Facility",
+      "msauto_BusinessId": "Business",
+      "msauto_BusinessOperationId": "Business Operation",
+      "msauto_contactid": "Contact",
+      "msauto_DeviceBrandId": "Device Brand",
+      "msauto_DeviceClassId": "Device Class",
+      "msauto_DeviceGenerationId": "Device Generation",
+      "msauto_DeviceId": "Device",
+      "msauto_DeviceModelCodeId": "Device Model Code",
+      "msauto_DeviceModelId": "Device Model",
+      "msauto_DeviceStyleId": "Device Style",
+      "msauto_DeviceVariantId": "Device Variant",
+      "msauto_identificationexpireson": "Identification Expires On",
+      "msauto_identificationnumber": "Identification Number",
+      "msauto_identificationtype": "Identification Type",
+      "msauto_LeadId": "Lead",
+      "msauto_msauto_testdrive_msauto_dealerplatedeviceassignment_TestDriveId": "Dealer Plate Device Assignments",
+      "msauto_name": "Name",
+      "msauto_OpportunityId": "Opportunity",
+      "msauto_scheduledduration": "Scheduled Duration",
+      "msauto_scheduledend": "Scheduled End",
+      "msauto_scheduledstart": "Scheduled Start",
+      "msauto_testdrive_Annotations": "Notes",
+      "msauto_testdrive_AsyncOperations": "System Jobs",
+      "msauto_testdrive_BulkDeleteFailures": "Bulk Delete Failures",
+      "msauto_testdrive_DuplicateBaseRecord": "Duplicate Records (msauto_testdrive_DuplicateBaseRecord)",
+      "msauto_testdrive_DuplicateMatchingRecord": "Duplicate Records (msauto_testdrive_DuplicateMatchingRecord)",
+      "msauto_testdrive_FileAttachments": "FileAttachments",
+      "msauto_testdrive_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msauto_testdrive_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msauto_testdrive_ProcessSession": "Process Sessions",
+      "msauto_testdrive_SyncErrors": "Sync Errors",
+      "msauto_testdriveid": "Test Drive",
+      "msauto_year": "Year",
+      "new_addressline1": "Address Line1",
+      "new_addressline2": "Address Line2",
+      "new_customersignature": "Customer Signature",
+      "new_didtheybriefyouandaddressyourdoubts": "Did they brief you and address your doubts?",
+      "new_drivinglicense": "Driving License",
+      "new_howlongwasthetestdriveinmins": "How long was the test drive (in mins) ?",
+      "new_ispremiumathome": "Is Premium (at home) ?",
+      "new_kmscovered": "Kms covered",
+      "new_pincode": "Pincode",
+      "new_ratethebehaviorofyoursalesexecutive": "Rate the behavior of your sales executive",
+      "new_SalesExecutive": "Sales Executive",
+      "new_testdrivestatus": "Test Drive Status",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Test Drives",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Test Drives (Views)",
+    "Name": "_msauto_testdrive_views",
+    "RelatedEntityName": "Test Drives",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "025023bd-6a23-ea11-a810-000d3a579caa": "Portal Test Drives",
+      "21ddcd9e-4fc9-4bb8-b29c-54395c857707": "Test Drive Advanced Find View",
+      "4f6da6bf-c28c-4713-9354-c663076dacec": "Test Drive Associated View",
+      "50cbf6af-fd8e-ec11-b400-002248256e57": "Active Test Drives for Today",
+      "b4de8c51-4d01-4743-add0-0a5661b7f25a": "Active Test Drives",
+      "b6f1fd6a-9455-4d19-bc03-fd6de411ba22": "Inactive Test Drives",
+      "f4e7a3fa-afd0-4a52-8305-145fc92e3b24": "Test Drive Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Identification Type (Test Drives)",
+    "Name": "msauto_testdrive_msauto_identificationtype",
+    "OptionSetInfoNameMapping": {
+      "100000000": "International License",
+      "972230000": "Permanent License",
+      "972230001": "Learner's license",
+      "972230002": "Other"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msauto_identificationtype",
+        "OptionSetReferenceEntityName": "Test Drives"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msauto_identificationtype",
+    "RelatedEntityName": "Test Drives",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Test Drives)",
+    "Name": "msauto_testdrive_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Test Drives"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Test Drives",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Test Drives)",
+    "Name": "msauto_testdrive_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Requested",
+      "2": "Closed",
+      "972230000": "Confirmed",
+      "972230001": "In Progress",
+      "972230002": "Completed",
+      "972230003": "Canceled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Test Drives"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Test Drives",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Yes/no option set",
+    "Name": "msevtmgt_nooryes",
+    "OptionSetInfoNameMapping": {
+      "100000001": "No",
+      "100000002": "Yes"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_didtheybriefyouandaddressyourdoubts",
+        "OptionSetReferenceEntityName": "Test Drives"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_didtheybriefyouandaddressyourdoubts",
+    "RelatedEntityName": "Test Drives",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Premium (at home) ? (Test Drives)",
+    "Name": "new_msauto_testdrive_new_ispremiumathome",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_ispremiumathome",
+        "OptionSetReferenceEntityName": "Test Drives"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "new_ispremiumathome",
+    "RelatedEntityName": "Test Drives",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Test Drive Status",
+    "Name": "new_scheduled",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Scheduled",
+      "100000001": "Completed",
+      "100000002": "Cancelled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_testdrivestatus",
+        "OptionSetReferenceEntityName": "Test Drives"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_testdrivestatus",
+    "RelatedEntityName": "Test Drives",
+    "Type": "OptionSetInfo"
+  }
+]

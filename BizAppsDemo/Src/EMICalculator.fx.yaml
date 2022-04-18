@@ -1,0 +1,147 @@
+EMICalculator As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: =
+
+    Rectangle1_9 As rectangle:
+        Height: =73
+        Width: =640
+        Y: =4
+        ZIndex: =1
+
+    Icon1_9 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back();
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_10 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =73
+        Size: =20
+        Text: ="EMI CALCULATOR"
+        Width: =241
+        X: =205
+        Y: =4
+        ZIndex: =4
+
+    LoanPrincipal As text:
+        Default: =Text(Principal)
+        Format: =TextFormat.Number
+        Height: =85
+        Size: =21
+        Width: =240
+        X: =360
+        Y: =150
+        ZIndex: =5
+
+    Label19 As label:
+        Height: =85
+        Size: =21
+        Text: ="Loan Amount"
+        Width: =335
+        X: =25
+        Y: =150
+        ZIndex: =6
+
+    Label19_1 As label:
+        Height: =85
+        Size: =21
+        Text: ="Tenure (in Months)"
+        Width: =335
+        X: =25
+        Y: =250
+        ZIndex: =7
+
+    Tenure As text:
+        Default: ="36"
+        Format: =TextFormat.Number
+        Height: =85
+        Size: =21
+        Width: =240
+        X: =360
+        Y: =250
+        ZIndex: =8
+
+    Label19_2 As label:
+        Height: =85
+        Size: =21
+        Text: ="Interest "
+        Width: =335
+        X: =25
+        Y: =355
+        ZIndex: =9
+
+    Interest As slider:
+        Default: =9
+        Height: =70
+        Max: =20
+        Width: =560
+        X: =25
+        Y: =440
+        ZIndex: =10
+
+    Label20 As label:
+        Height: =82
+        Size: =21
+        Text: ="Your EMI"
+        Width: =252
+        X: =13
+        Y: =538
+        ZIndex: =11
+
+    Label20_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =82
+        Size: =21
+        Text: |-
+            ="Rs. "&Round((Value(LoanPrincipal.Text) * (Interest.Value/1200) * Power(
+                (1 + (Interest.Value/1200)),
+                Value(Tenure.Text)
+            )) / (Power(
+                (1 + (Interest.Value/1200)),
+                Value(Tenure.Text)
+            ) - 1),2)
+        Width: =240
+        X: =360
+        Y: =538
+        ZIndex: =12
+
+    Label19_3 As label:
+        Height: =75
+        Size: =21
+        Text: =Interest.Value & "%"
+        Width: =240
+        X: =360
+        Y: =365
+        ZIndex: =13
+
+    Label20_2 As label:
+        Height: =82
+        Size: =21
+        Text: ="Total (Principal+Interest)"
+        Width: =335
+        X: =13
+        Y: =626
+        ZIndex: =14
+
+    Label20_3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =82
+        Size: =21
+        Text: |-
+            ="Rs. "&Round((Value(LoanPrincipal.Text) * (Interest.Value/1200) * Power(
+                (1 + (Interest.Value/1200)),
+                Value(Tenure.Text)
+            )) / (Power(
+                (1 + (Interest.Value/1200)),
+                Value(Tenure.Text)
+            ) - 1),2) * Value(Tenure.Text)
+        Width: =280
+        X: =360
+        Y: =626
+        ZIndex: =15
+

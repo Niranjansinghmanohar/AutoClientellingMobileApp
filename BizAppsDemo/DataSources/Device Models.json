@@ -1,0 +1,119 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "msauto_devicemodels",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "msauto_devicemodel",
+    "MaxGetRowsCount": 500,
+    "Name": "Device Models",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "entityimage": "Image",
+      "entityimageid": "EntityImageId",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "msauto_code": "Code",
+      "msauto_description": "Description",
+      "msauto_DeviceBrandId": "Device Brand",
+      "msauto_DeviceClassId": "Device Class",
+      "msauto_DeviceGenerationId": "Device Generation",
+      "msauto_devicemodel_AsyncOperations": "System Jobs",
+      "msauto_devicemodel_BulkDeleteFailures": "Bulk Delete Failures",
+      "msauto_devicemodel_DuplicateBaseRecord": "Duplicate Records (msauto_devicemodel_DuplicateBaseRecord)",
+      "msauto_devicemodel_DuplicateMatchingRecord": "Duplicate Records (msauto_devicemodel_DuplicateMatchingRecord)",
+      "msauto_devicemodel_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "msauto_devicemodel_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "msauto_devicemodel_ProcessSession": "Process Sessions",
+      "msauto_devicemodel_SyncErrors": "Sync Errors",
+      "msauto_devicemodelid": "Device Model",
+      "msauto_DeviceStyleId": "Device Style",
+      "msauto_DeviceTypeId": "Device Type",
+      "msauto_msauto_devicemodel_msauto_device_DeviceModelId": "Devices",
+      "msauto_msauto_devicemodel_msauto_devicemodelcode_DeviceModelId": "Device Model Codes",
+      "msauto_msauto_devicemodel_msauto_devicevariant_DeviceModelId": "Device Variants",
+      "msauto_msauto_devicemodel_msauto_leaddevice_DeviceModelId": "Lead Devices",
+      "msauto_msauto_devicemodel_msauto_testdrive_DeviceModelld": "Test Drives",
+      "msauto_name": "Name",
+      "new_msauto_devicemodel_lead_TestDriveDeviceModel": "Leads",
+      "new_msauto_devicemodel_new_inventory_DeviceModel": "Inventories",
+      "new_msauto_devicemodel_opportunity_DeviceModelBooked": "Opportunities",
+      "new_msauto_devicemodel_quote_DeviceModelbooked": "Quotes",
+      "new_onroadprice": "On-road Price",
+      "new_onroadprice_base": "On-road Price (Base)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Device Models",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Device Models (Views)",
+    "Name": "_msauto_devicemodel_views",
+    "RelatedEntityName": "Device Models",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "52b63046-41cb-4890-84d4-cccb716b2da3": "Device Model Advanced Find View",
+      "5cebae4a-f88d-42c7-ac79-5a5dbeec7ae5": "Device Model Lookup View",
+      "89b43f1d-9042-41f9-9a1f-c7e121b5f9b2": "Inactive Device Models",
+      "a604ec7f-5cdf-4a55-b92e-ee6aedc53200": "Active Device Models",
+      "ea126f10-2b82-4111-9382-63b6948add6c": "Device Model Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Device Models)",
+    "Name": "msauto_devicemodel_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Device Models"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Device Models",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Device Models)",
+    "Name": "msauto_devicemodel_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Device Models"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Device Models",
+    "Type": "OptionSetInfo"
+  }
+]

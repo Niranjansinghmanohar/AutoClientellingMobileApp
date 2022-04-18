@@ -1,0 +1,134 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(
+            MenuItems,
+            Table(
+                {
+                    ID: "1",
+                    Title: "HOME",
+                    Icon: Icon.Home,
+                    Screen: MenuScreen,
+                    Image: home
+                },
+                {
+                    ID: "2",
+                    Title: "BIKES",
+                    Icon: Icon.ShoppingCart,
+                    Screen: ProductModelScreen,
+                    Image: 'Bike_image-removebg-preview'      
+                    },
+                {
+                    ID: "3",
+                    Title: "ENQUIRIES",
+                    Icon: Icon.AddUser,
+                    Screen: LeadScreen,
+                    Image: customer
+                },
+                {
+                    ID: "4",
+                    Title: "TEST RIDE",
+                    Icon: Icon.Cars,
+                    Screen: TestDriveScreen,
+                    Image: motocross
+                },
+                {
+                    ID: "5",
+                    Title: "BOOKING",
+                    Icon: Icon.Money,
+                    Screen: BookingScreen,
+                    Image: cart
+                }/*,
+                {
+                    ID: "6",
+                    Title: "DELIVERY",
+                    Icon: Icon.DockCheckProperties,
+                    Screen: MenuScreen,
+                    Image: cart
+                }*/
+            )
+        );
+        ClearCollect(
+            imgList,
+            {
+                img: 'Pulsar250_Card-Image-new',
+                order: 1
+            },
+            {
+                img: Dominar400,
+                order: 2
+            },
+            {
+                img: 'Avenger-220',
+                order: 3
+            }
+        );
+        Set(
+            currentImg,
+            1
+        );
+        ClearCollect(
+            TaskList,
+            Table(
+                {
+                    ID: "001",
+                    Name: "Send quote | Akshay Kumar",
+                    Priority: "High",
+                    Icon: Icon.Mail,
+                    PendingSinceDays: 2
+                },
+                {
+                    ID: "002",
+                    Name: "Test ride | Vijay Kumar",
+                    Priority: "Medium",
+                    Icon: Icon.Cars,
+                    PendingSinceDays: 3
+                },
+                {
+                    ID: "003",
+                    Name: "Followup | Amit",
+                    Priority: "Low",
+                    Icon: Icon.Mobile,
+                    PendingSinceDays: 7
+                }
+            )
+        );
+        Set(
+            FilteredLeads,
+            Filter(
+                Leads,
+                'Leads (Views)'.'Open Leads'
+            )
+        );
+        ClearCollect(ModelPricing,Table(
+            {
+                Model:"Cruise 220",
+                Price: 135000
+        },
+        {
+                Model:"Dominar 400",
+                Price: 218000
+        },
+        {
+                Model:"Dominar 250",
+                Price: 165000
+        },
+        {
+                Model:"Pulsar 250",
+                Price: 140000
+        },
+        {
+                Model:"Pulsar RS200",
+                Price: 165000
+        },{
+                Model:"NA",
+                Price: 136500
+        }
+        
+        ));
+        
+        Set(DefaultDealer, First(Filter('Business Operations','Business Operations (Views)'.'Active Business Operations')));
+        
+        Set(InsuranceProviders,Table({Provider:"Self",Cost:0,logo:'3rdparty'},{Provider:"BajajFinServ",Cost:3000,logo:bajajfinserv},{Provider:"HDFC Ergo",Cost:3500,logo:hdfcergo}));
+    StartScreen: =LoginScreen
+

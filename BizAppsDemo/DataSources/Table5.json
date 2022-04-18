@@ -1,0 +1,36 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_excel",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2022-03-22T16:45:55.1860000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "__PowerAppsId__": "Row id",
+      "BrakesFront": "BrakesFront",
+      "BrakesRear": "BrakesRear",
+      "EngineCapacity": "EngineCapacity",
+      "EngineType": "EngineType",
+      "FuelTank": "FuelTank",
+      "ID": "ID",
+      "ModelName": "ModelName",
+      "Power": "Power",
+      "Price": "Price",
+      "SuspensionFront": "SuspensionFront",
+      "SuspensionRear": "SuspensionRear",
+      "TopSpeed": "TopSpeed",
+      "Torque": "Torque",
+      "Transmission": "Transmission",
+      "TyresFront": "TyresFront",
+      "TyresRear": "TyresRear",
+      "VariantName": "VariantName"
+    },
+    "DatasetName": "b!DZA9F7anhk2BWCvu6LOmmGIwy0gHIOFFpS7Mq3Zyj6kNlcTE6cARSINUZKQtkH4s.01HPYAO6SLCEQ2ELTPU5D3VR7ZO4I2BZ7O",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Table5",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

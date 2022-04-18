@@ -1,0 +1,207 @@
+BookingScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: =ClearCollect(BookingTotalPriceCollection,Blank());Set(BookingList,Filter(Opportunities,'Opportunities (Views)'.'Open Opportunities - Device Model selected'));
+
+    Rectangle1_13 As rectangle:
+        Height: =73
+        Width: =640
+        ZIndex: =1
+
+    Icon1_11 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(MenuScreen)
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_15 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =62
+        Size: =20
+        Text: ="BOOKINGS"
+        Width: =281
+        X: =179
+        Y: =11
+        ZIndex: =7
+
+    Icon4_2 As icon.Add:
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =79
+        Icon: =Icon.Add
+        OnSelect: =ResetForm(Form8);Set(BookingContactParam,Blank());Set(BookingModelParam,Blank());Navigate(AddNewBookingScreen1);
+        Tooltip: ="Add new Lead"
+        Width: =116
+        X: =523
+        Y: =73
+        ZIndex: =8
+
+    "Gallery4_5 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =117
+        Items: =MenuItems
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Height+10
+        Y: =1019
+        ZIndex: =9
+
+        Image5_5 As image:
+            Height: =Parent.TemplateHeight/2
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth/2
+            X: =Parent.TemplateWidth/4
+            Y: =Parent.TemplateHeight/5
+            ZIndex: =1
+
+        Label7_5 As label:
+            Align: =Align.Center
+            Height: =Parent.TemplateHeight*0.2
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =Parent.TemplateWidth
+            X: |
+                =0
+            Y: =93.6
+            ZIndex: =2
+
+    "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =867
+        Items: =Sort(BookingList,'Modified On',Descending)
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Y: =152
+        ZIndex: =10
+
+        Image10 As image:
+            Height: =128
+            Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=ThisItem.'Device Model Booked'.Name)).ImageURL)),First(Filter(Table2,VariantName=ThisItem.'Device Model Booked'.Name)).ImageURL,'default-profile-icon-24')
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title8 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Contact.'Full Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image10.Width - 250
+            X: =Image10.X + Image10.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            DisplayMode: =If(ThisItem.'Delivery Status'='Delivery Status (Opportunities)'.Completed,DisplayMode.Disabled,DisplayMode.Edit)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: |
+                =Select(Parent);Set(BookingFocusVal,ThisItem);
+                If(!IsBlank(ThisItem.'Payment Mode'),Navigate(DeliveryScreen),Navigate(AddNewBookingScreen2));
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator7 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Title8_1 As label:
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.'Device Model Booked'.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image10.Width - 300
+            X: =167
+            Y: =80
+            ZIndex: =6
+
+        Title8_2 As label:
+            FontWeight: =FontWeight.Normal
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: |-
+                ="Expected Delivery By: " & ThisItem.'Expected Delivery Date'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image10.Width - 104
+            X: =167
+            Y: =119
+            ZIndex: =7
+
+        Title8_3 As label:
+            Align: =Align.Right
+            Color: =If(!IsBlank(ThisItem.'Payment Mode'),If(ThisItem.'Delivery Status'='Delivery Status (Opportunities)'.Completed,Green,Orange),Red)
+            FontWeight: =FontWeight.Bold
+            Height: =30
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =If(!IsBlank(ThisItem.'Payment Mode'),If(ThisItem.'Delivery Status'='Delivery Status (Opportunities)'.Completed,"Delivered","Confirmed"),"Open")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =180
+            X: =379
+            Y: =50
+            ZIndex: =8
+
+    "Gallery13 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =79
+        Items: |-
+            =Table({Name:"All",Color:LightGray},{Name:"Open",Color:Orange},{Name:"Confirmed",Color:LightGreen})
+        OnSelect: |-
+            =If(ThisItem.Name="Open",Set(BookingList,Filter(Opportunities,'Opportunities (Views)'.'Open Opportunities - Device Model selected - Pending Confirmation')));
+            If(ThisItem.Name="Confirmed",Set(BookingList,Filter(Opportunities,'Opportunities (Views)'.'Open Opportunities - Device Model selected - Confirmed')));
+            If(ThisItem.Name="All",Set(BookingList,Filter(Opportunities,'Opportunities (Views)'.'Open Opportunities - Device Model selected')));
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Width/3
+        Width: =523
+        Y: =73
+        ZIndex: =11
+
+        Button16 As button:
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =ThisItem.Color
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent);
+            Size: =20
+            Text: =ThisItem.Name
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+

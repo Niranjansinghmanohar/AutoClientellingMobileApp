@@ -1,0 +1,173 @@
+ProductModelScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: =Set(ShowVariantGrid,false);
+
+    Rectangle1_11 As rectangle:
+        Height: =73
+        Width: =640
+        ZIndex: =1
+
+    Label4_13 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =62
+        Size: =20
+        Text: ="CATALOG"
+        Width: =280
+        X: =(Parent.Width-Self.Width)/2
+        ZIndex: =7
+
+    "Gallery4_3 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =118
+        Items: =MenuItems
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Height + 10
+        Y: =1017
+        ZIndex: =9
+
+        Image5_3 As image:
+            Height: =Parent.TemplateHeight/2
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth/2
+            X: =Parent.TemplateWidth/4
+            Y: =Parent.TemplateHeight/5
+            ZIndex: =1
+
+        Label7_3 As label:
+            Align: =Align.Center
+            Height: =Parent.TemplateHeight*0.2
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =Parent.TemplateWidth
+            X: |
+                =0
+            Y: =93.6
+            ZIndex: =2
+
+    "Gallery7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =620
+        Items: =Table1
+        Layout: =Layout.Vertical
+        OnSelect: =Set(ShowVariantGrid,true);
+        TemplatePadding: =0
+        TemplateSize: =Self.Height/5
+        Y: =73
+        ZIndex: =10
+
+        Image6 As image:
+            Height: =Parent.TemplateHeight*0.9
+            Image: =ThisItem.ImageURL
+            OnSelect: =Select(Parent)
+            Width: =250
+            X: =16
+            Y: =Parent.TemplateHeight*0.05
+            ZIndex: =1
+
+        Title5 As label:
+            Height: =Parent.TemplateHeight*0.3
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.ModelName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =301
+            X: =300
+            Y: =19
+            ZIndex: =2
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Visible: =false
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator6 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label10 As label:
+            Height: =Parent.TemplateHeight*0.3
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =CountRows(Filter(Table2,Model=Title5.Text)) & " variants"
+            Width: =279
+            X: =300
+            Y: =Parent.TemplateHeight*0.6
+            ZIndex: =6
+
+    "Gallery9 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Height: =253
+        Items: =Filter(Table2,Model=Gallery7.Selected.ModelName)
+        OnSelect: =Set(ViewVariantDetailsItem,Gallery9.Selected);Navigate(ProductVariantScreen);
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Width/3
+        Visible: =ShowVariantGrid
+        Y: =763
+        ZIndex: =11
+
+        Image9 As image:
+            Height: =Parent.TemplateHeight*0.7
+            Image: =ThisItem.ImageURL
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth * 0.8
+            X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
+            Y: =Parent.TemplateHeight*0.05
+            ZIndex: =1
+
+        Title7 As label:
+            Align: =Align.Center
+            Height: =Parent.TemplateHeight*0.1
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.VariantName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth 
+            Y: =Parent.TemplateHeight*0.8
+            ZIndex: =2
+
+    Label12 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =21
+        Text: ="Select a variant to view details"
+        Visible: =ShowVariantGrid
+        Width: =560
+        X: =40
+        Y: =716
+        ZIndex: =12
+
+    Icon13_1 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =60
+        Icon: =Icon.BackArrow
+        OnSelect: =Back();
+        Width: =60
+        X: =10
+        Y: =2
+        ZIndex: =13
+

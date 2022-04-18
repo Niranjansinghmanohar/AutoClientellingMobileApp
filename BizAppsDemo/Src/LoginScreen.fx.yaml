@@ -1,0 +1,60 @@
+LoginScreen As screen:
+    BackgroundImage: =dominar
+    Fill: =RGBA(255, 255, 255, 1)
+    ImagePosition: =ImagePosition.Stretch
+
+    Label1 As label:
+        Align: =Align.Center
+        Color: =RGBA(0, 18, 107, 1)
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =60
+        Size: =30
+        Text: ="RAFTAAR"
+        Width: =Parent.Width/2
+        X: =158
+        Y: =244
+        ZIndex: =2
+
+    UsernameInput As text:
+        Default: |
+            ="user@bajaj.com"
+        Height: =66
+        HintText: ="Username"
+        Size: =20
+        Width: =373
+        X: =131
+        Y: =731
+        ZIndex: =4
+
+    PasswordInput As text:
+        Default: |
+            ="pass@word1"
+        Height: =56
+        HintText: ="Password"
+        Mode: =TextMode.Password
+        Size: =15
+        Width: =373
+        X: =131
+        Y: =842
+        ZIndex: =5
+
+    Button1 As button:
+        DisplayMode: =If(Len(PasswordInput.Text)>0 && Len(UsernameInput.Text)>0,DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(141, 198, 63, 1)
+        Height: =63
+        OnSelect: =Navigate(MenuScreen);
+        Text: ="Sign In"
+        Width: =190
+        X: =223
+        Y: =965
+        ZIndex: =6
+
+    Image2 As image:
+        Height: =204
+        Image: ='Bajaj_Logo-removebg-preview'
+        Width: =296
+        X: =170
+        Y: =40
+        ZIndex: =7
+
