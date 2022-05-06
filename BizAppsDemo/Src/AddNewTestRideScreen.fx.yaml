@@ -438,6 +438,9 @@ AddNewTestRideScreen As screen:
                 HoverBorderColor: =RGBA(0, 18, 107, 1)
                 HoverFillColor: =RGBA(186, 202, 226, 1)
                 HoverFontColor: =RGBA(0, 0, 0, 1)
+                OnAddressSelect: |-
+                    =If(IsBlank(AddressInput1.SearchResultJson), "",ClearCollect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
+                OnChange: =false
                 PressedBorderColor: =RGBA(0, 18, 107, 1)
                 PressedFillColor: =RGBA(255, 255, 255, 1)
                 PressedFontColor: =RGBA(0, 0, 0, 1)
@@ -451,6 +454,9 @@ AddNewTestRideScreen As screen:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 DisplayMode: =DisplayMode.Edit
                 Height: =282
+                Items: =locations
+                ItemsLatitudes: ="Latitude"
+                ItemsLongitudes: ="Longitude"
                 PinColor: =RGBA(29, 114, 169, 1)
                 Width: =556
                 X: =40
