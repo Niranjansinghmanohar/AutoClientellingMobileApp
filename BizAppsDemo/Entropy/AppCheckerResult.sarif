@@ -4713,49 +4713,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "AddNewBookingScreen3.Form9.'Aadhar Card_DataCard1'.DataCardValue66.AccessibleLabel"
+                  "fullyQualifiedName": "AddNewBookingScreen3.Form9.'Bank Statement_DataCard2'.DataCardValue60.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "AddNewBookingScreen3.Form9.'Aadhar Card_DataCard1'.DataCardValue66.AccessibleLabel",
+                  "fullyQualifiedName": "AddNewBookingScreen3.Form9.'Bank Statement_DataCard2'.DataCardValue60.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "AddNewBookingScreen3",
-                "type": "AddNewBookingScreen3.Form9.'Aadhar Card_DataCard1'.DataCardValue66"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "AddNewBookingScreen3.Form9.'Bank Statement_DataCard1'.DataCardValue67.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "AddNewBookingScreen3.Form9.'Bank Statement_DataCard1'.DataCardValue67.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "AddNewBookingScreen3",
-                "type": "AddNewBookingScreen3.Form9.'Bank Statement_DataCard1'.DataCardValue67"
+                "type": "AddNewBookingScreen3.Form9.'Bank Statement_DataCard2'.DataCardValue60"
               }
             }
           ],

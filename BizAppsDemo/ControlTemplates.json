@@ -169,6 +169,326 @@
     "OverridableProperties": {},
     "Version": "2.3.0"
   },
+  "FormProcessor": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/FormProcessor",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "FormProcessor",
+    "OverridableProperties": {
+      "Checkboxes": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "Record",
+          "Name": "Root",
+          "Type": []
+        },
+        "Version": "1.324"
+      },
+      "Fields": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "Record",
+          "Name": "Root",
+          "Type": [
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "Aadhar Number",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "DOB",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "Full Name",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "Gender",
+              "Type": []
+            }
+          ]
+        },
+        "Version": "1.324"
+      },
+      "Results": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "Record",
+          "Name": "Root",
+          "Type": [
+            {
+              "EnumString": "",
+              "Kind": "Record",
+              "Name": "Aadhar Number",
+              "Type": [
+                {
+                  "EnumString": "",
+                  "Kind": "Record",
+                  "Name": "BoundingBox",
+                  "Type": [
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Height",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Left",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Top",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Width",
+                      "Type": []
+                    }
+                  ]
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "Confidence",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "PageNumber",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "String",
+                  "Name": "Value",
+                  "Type": []
+                }
+              ]
+            },
+            {
+              "EnumString": "",
+              "Kind": "Record",
+              "Name": "DOB",
+              "Type": [
+                {
+                  "EnumString": "",
+                  "Kind": "Record",
+                  "Name": "BoundingBox",
+                  "Type": [
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Height",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Left",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Top",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Width",
+                      "Type": []
+                    }
+                  ]
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "Confidence",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "PageNumber",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "String",
+                  "Name": "Value",
+                  "Type": []
+                }
+              ]
+            },
+            {
+              "EnumString": "",
+              "Kind": "Record",
+              "Name": "Full Name",
+              "Type": [
+                {
+                  "EnumString": "",
+                  "Kind": "Record",
+                  "Name": "BoundingBox",
+                  "Type": [
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Height",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Left",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Top",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Width",
+                      "Type": []
+                    }
+                  ]
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "Confidence",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "PageNumber",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "String",
+                  "Name": "Value",
+                  "Type": []
+                }
+              ]
+            },
+            {
+              "EnumString": "",
+              "Kind": "Record",
+              "Name": "Gender",
+              "Type": [
+                {
+                  "EnumString": "",
+                  "Kind": "Record",
+                  "Name": "BoundingBox",
+                  "Type": [
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Height",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Left",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Top",
+                      "Type": []
+                    },
+                    {
+                      "EnumString": "",
+                      "Kind": "Number",
+                      "Name": "Width",
+                      "Type": []
+                    }
+                  ]
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "Confidence",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "Number",
+                  "Name": "PageNumber",
+                  "Type": []
+                },
+                {
+                  "EnumString": "",
+                  "Kind": "String",
+                  "Name": "Value",
+                  "Type": []
+                }
+              ]
+            }
+          ]
+        },
+        "Version": "1.324"
+      },
+      "Tables": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "Record",
+          "Name": "Root",
+          "Type": []
+        },
+        "Version": "1.324"
+      }
+    },
+    "PCFDynamicSchemaForIRRetrieval": {
+      "Checkboxes": {
+        "DynamicSchema": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{}}",
+        "PCFSkipValidation": false
+      },
+      "Fields": {
+        "DynamicSchema": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"DOB\":{\"type\":\"string\",\"title\":\"value\"},\"Gender\":{\"type\":\"string\",\"title\":\"value\"},\"Full Name\":{\"type\":\"string\",\"title\":\"value\"},\"Aadhar Number\":{\"type\":\"string\",\"title\":\"value\"}}}",
+        "PCFSkipValidation": false
+      },
+      "Results": {
+        "DynamicSchema": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{\"DOB\":{\"type\":\"object\",\"properties\":{\"Value\":{\"type\":\"string\"},\"Confidence\":{\"type\":\"number\"},\"PageNumber\":{\"type\":\"number\"},\"BoundingBox\":{\"type\":\"object\",\"properties\":{\"Left\":{\"type\":\"number\"},\"Top\":{\"type\":\"number\"},\"Width\":{\"type\":\"number\"},\"Height\":{\"type\":\"number\"}}}}},\"Gender\":{\"type\":\"object\",\"properties\":{\"Value\":{\"type\":\"string\"},\"Confidence\":{\"type\":\"number\"},\"PageNumber\":{\"type\":\"number\"},\"BoundingBox\":{\"type\":\"object\",\"properties\":{\"Left\":{\"type\":\"number\"},\"Top\":{\"type\":\"number\"},\"Width\":{\"type\":\"number\"},\"Height\":{\"type\":\"number\"}}}}},\"Full Name\":{\"type\":\"object\",\"properties\":{\"Value\":{\"type\":\"string\"},\"Confidence\":{\"type\":\"number\"},\"PageNumber\":{\"type\":\"number\"},\"BoundingBox\":{\"type\":\"object\",\"properties\":{\"Left\":{\"type\":\"number\"},\"Top\":{\"type\":\"number\"},\"Width\":{\"type\":\"number\"},\"Height\":{\"type\":\"number\"}}}}},\"Aadhar Number\":{\"type\":\"object\",\"properties\":{\"Value\":{\"type\":\"string\"},\"Confidence\":{\"type\":\"number\"},\"PageNumber\":{\"type\":\"number\"},\"BoundingBox\":{\"type\":\"object\",\"properties\":{\"Left\":{\"type\":\"number\"},\"Top\":{\"type\":\"number\"},\"Width\":{\"type\":\"number\"},\"Height\":{\"type\":\"number\"}}}}}}}",
+        "PCFSkipValidation": false
+      },
+      "Tables": {
+        "DynamicSchema": "{\"$schema\":\"http://json-schema.org/draft-04/schema#\",\"type\":\"object\",\"properties\":{}}",
+        "PCFSkipValidation": false
+      }
+    },
+    "TemplateDisplayName": "FormProcessor",
+    "Version": "1.0.96"
+  },
   "gallery": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,

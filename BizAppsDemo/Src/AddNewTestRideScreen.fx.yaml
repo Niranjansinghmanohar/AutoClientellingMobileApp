@@ -452,14 +452,20 @@ AddNewTestRideScreen As screen:
 
             "Map1 As 'Map (preview)'.pcfdataset":
                 BorderColor: =RGBA(0, 18, 107, 1)
+                DefaultLatitude: |-
+                    =//47.642967
+                    Location.Latitude
+                DefaultLongitude: |-
+                    =//-122.126801
+                    Location.Longitude
                 DisplayMode: =DisplayMode.Edit
                 Height: =282
                 Items: =locations
                 ItemsLatitudes: ="Latitude"
                 ItemsLongitudes: ="Longitude"
                 PinColor: =RGBA(29, 114, 169, 1)
-                Width: =556
-                X: =40
+                Width: =Parent.Width-60
+                X: =30
                 Y: =110
                 ZIndex: =2
 

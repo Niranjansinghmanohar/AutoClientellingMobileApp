@@ -63,7 +63,7 @@ AddNewBookingScreen3 As screen:
         Visible: =DataCardValue63.Selected.Value='Payment Mode (Opportunities)'.EMI
         Width: =280
         X: =180
-        Y: =978
+        Y: =985
         ZIndex: =14
 
     Form9 As form:
@@ -340,82 +340,61 @@ AddNewBookingScreen3 As screen:
                 Y: =DataCardKey69.Y
                 ZIndex: =4
 
-        "'Aadhar Card_DataCard1' As typedDataCard.fileEditCard":
+        DataCard6 As typedDataCard.blankCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="new_aadharcard"
-            Default: |-
-                =If(!IsBlank(ThisItem.'Aadhar Card'.FileName), Table({DisplayName: ThisItem.'Aadhar Card'.FileName, Value: ThisItem.'Aadhar Card'.Value}), Blank())
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_aadharcard")
+            DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =true
-            Update: =DataCardValue66.Attachments
+            Height: =354
             Width: =640
             X: =0
             Y: =3
             ZIndex: =1
 
-            DataCardKey72 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
+            FormProcessor1 As FormProcessor:
+                BorderColor: =RGBA(210, 208, 206, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =RGBA(61, 95, 174, 1)
+                FontColor: =RGBA(255, 255, 255, 1)
+                Height: =166
+                ModelId: ="Bajaj AadharCard FormProcessor Model (b4887d56-2f0f-440f-88d3-59583943270c)"
+                Width: =566
                 X: =30
-                Y: =10
+                Y: =46
                 ZIndex: =1
 
-            DataCardValue66 As attachments:
-                AddAttachmentText: ="Upload file"
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DisplayMode: =Parent.DisplayMode
-                Height: =170
-                IsInDataCard: =true
-                Items: =Parent.Default
-                MaxAttachments: =1
-                MaxAttachmentsText: =""
-                NoAttachmentsText: ="There is no file."
-                PaddingBottom: =5
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =5
-                PaddingTop: =5
+            Label28 As label:
+                Height: =36
                 Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey72.Y + DataCardKey72.Height + 5
+                Text: ="Upload Adhar Card"
+                Width: =560
+                X: =16
+                Y: =10
                 ZIndex: =2
 
-            ErrorMessage72 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue66.Y + DataCardValue66.Height
+            Label28_1 As label:
+                Height: =45
+                Size: =21
+                Text: |-
+                    =Concatenate("Adhar Number: " ,FormProcessor1.Results.'Aadhar Number'.Value)
+                Width: =560
+                X: =36
+                Y: =223
                 ZIndex: =3
 
-            StarVisible72 As label:
-                Align: =Align.Center
-                Height: =DataCardKey72.Height
+            Label28_2 As label:
+                Height: =55
                 Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey72.Y
+                Text: |-
+                    =Concatenate("Full Name : " ,FormProcessor1.Results.'Full Name'.Value)
+                Width: =560
+                X: =36
+                Y: =268
                 ZIndex: =4
 
-        "'Bank Statement_DataCard1' As typedDataCard.fileEditCard":
+        "'Bank Statement_DataCard2' As typedDataCard.fileEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="new_bankstatement"
             Default: |-
@@ -424,15 +403,15 @@ AddNewBookingScreen3 As screen:
             DisplayName: =DataSourceInfo([@Opportunities],DataSourceInfo.DisplayName,"new_bankstatement")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =If(DataCardValue63.Selected.Value='Payment Mode (Opportunities)'.EMI,true,false)
-            Update: =DataCardValue67.Attachments
+            Required: =false
+            Update: =DataCardValue60.Attachments
             Visible: =If(DataCardValue63.Selected.Value='Payment Mode (Opportunities)'.EMI,true,false)
             Width: =640
             X: =0
             Y: =4
             ZIndex: =1
 
-            DataCardKey73 As label:
+            DataCardKey65 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -443,7 +422,7 @@ AddNewBookingScreen3 As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue67 As attachments:
+            DataCardValue60 As attachments:
                 AddAttachmentText: ="Upload file"
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisplayMode: =Parent.DisplayMode
@@ -461,10 +440,10 @@ AddNewBookingScreen3 As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey73.Y + DataCardKey73.Height + 5
+                Y: =DataCardKey65.Y + DataCardKey65.Height + 5
                 ZIndex: =2
 
-            ErrorMessage73 As label:
+            ErrorMessage65 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -477,17 +456,17 @@ AddNewBookingScreen3 As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue67.Y + DataCardValue67.Height
+                Y: =DataCardValue60.Y + DataCardValue60.Height
                 ZIndex: =3
 
-            StarVisible73 As label:
+            StarVisible65 As label:
                 Align: =Align.Center
-                Height: =DataCardKey73.Height
+                Height: =DataCardKey65.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey73.Y
+                Y: =DataCardKey65.Y
                 ZIndex: =4
 
