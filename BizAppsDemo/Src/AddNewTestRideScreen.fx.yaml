@@ -415,6 +415,48 @@ AddNewTestRideScreen As screen:
                 Y: =63
                 ZIndex: =6
 
+        DataCard2 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =225
+            Visible: =DataCardValue14.Selected.Value
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =1
+
+            "AddressInput1 As 'Address input'":
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFillColor: =RGBA(244, 244, 244, 1)
+                DisabledFontColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =RGBA(255, 255, 255, 1)
+                Height: =70
+                HintText: ="Search Address"
+                HoverBorderColor: =RGBA(0, 18, 107, 1)
+                HoverFillColor: =RGBA(186, 202, 226, 1)
+                HoverFontColor: =RGBA(0, 0, 0, 1)
+                PressedBorderColor: =RGBA(0, 18, 107, 1)
+                PressedFillColor: =RGBA(255, 255, 255, 1)
+                PressedFontColor: =RGBA(0, 0, 0, 1)
+                TextColor: =RGBA(0, 0, 0, 1)
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =14
+                ZIndex: =1
+
+            "Map1 As 'Map (preview)'.pcfdataset":
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisplayMode: =DisplayMode.Edit
+                Height: =282
+                PinColor: =RGBA(29, 114, 169, 1)
+                Width: =556
+                X: =40
+                Y: =110
+                ZIndex: =2
+
         "'Address Line1_DataCard1' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="new_addressline1"
@@ -429,7 +471,7 @@ AddNewTestRideScreen As screen:
             Visible: =DataCardValue14.Selected.Value
             Width: =640
             X: =0
-            Y: =6
+            Y: =7
             ZIndex: =1
 
             DataCardKey18 As label:
@@ -445,7 +487,7 @@ AddNewTestRideScreen As screen:
 
             DataCardValue16 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =Concatenate(AddressInput1.StreetNumber," " ,AddressInput1.StreetName)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -503,7 +545,7 @@ AddNewTestRideScreen As screen:
             Visible: =DataCardValue14.Selected.Value
             Width: =640
             X: =0
-            Y: =7
+            Y: =8
             ZIndex: =1
 
             DataCardKey19 As label:
@@ -519,7 +561,7 @@ AddNewTestRideScreen As screen:
 
             DataCardValue17 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =Concatenate(AddressInput1.Municipality," ", AddressInput1.MunicipalitySubdivision)
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -577,7 +619,7 @@ AddNewTestRideScreen As screen:
             Visible: =DataCardValue14.Selected.Value
             Width: =640
             X: =0
-            Y: =8
+            Y: =9
             ZIndex: =1
 
             DataCardKey20 As label:
@@ -593,7 +635,7 @@ AddNewTestRideScreen As screen:
 
             DataCardValue18 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =AddressInput1.PostalCode
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -650,7 +692,7 @@ AddNewTestRideScreen As screen:
             Update: =DataCardValue19.Attachments
             Width: =640
             X: =0
-            Y: =9
+            Y: =10
             ZIndex: =1
 
             DataCardKey12 As label:
@@ -725,7 +767,7 @@ AddNewTestRideScreen As screen:
             Visible: =false
             Width: =640
             X: =0
-            Y: =10
+            Y: =11
             ZIndex: =1
 
             DataCardKey52 As label:

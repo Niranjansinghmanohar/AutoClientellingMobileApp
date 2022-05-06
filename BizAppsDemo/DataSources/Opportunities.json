@@ -201,6 +201,7 @@
       "Opportunity_Appointments": "Appointments",
       "Opportunity_AsyncOperations": "System Jobs",
       "Opportunity_BulkDeleteFailures": "Bulk Delete Failures",
+      "opportunity_chats": "Teams chats",
       "opportunity_connections1": "Connections (opportunity_connections1)",
       "opportunity_connections2": "Connections (opportunity_connections2)",
       "Opportunity_DuplicateBaseRecord": "Duplicate Records (Opportunity_DuplicateBaseRecord)",
@@ -341,6 +342,7 @@
       "88a16890-cfe2-4071-ab7c-d6dafc99e1f1": "All Project Service Opportunities",
       "8a060c3f-edce-4deb-b283-c6773b222f92": "My Open Opportunities Scored",
       "8a3fd1f6-f35c-4295-aac3-ef5cadf28f50": "Open opportunities without sequences",
+      "8d326cf3-9a3d-e311-80c5-00155dd005db": "All Opportunities (8d326cf3-9a3d-e311-80c5-00155dd005db)",
       "99d19c46-138f-45b9-b95d-fbb4035d0b0e": "Project Service Opportunities Closing Next Month",
       "9bee7ca3-b068-df11-ae90-00155d2e3002": "Closed Opportunities in Current Fiscal Year",
       "9c3f7ee8-eca7-e211-9fb6-00155dd0ea05": "Recent Opportunities",
@@ -356,7 +358,7 @@
       "b9a38d60-892e-4360-a0f3-0961f7b9acad": "Project Service Opportunities I am a member of",
       "bf649add-6c30-ea11-a813-000d3a5475f7": "Opportunities Forecast View",
       "c6179eaa-6f4e-e611-80be-0024e8469fb9": "My Open Opportunities by Relationship",
-      "c6f6fc1b-1b3e-e711-80e1-00155d871bb4": "All Opportunities",
+      "c6f6fc1b-1b3e-e711-80e1-00155d871bb4": "All Opportunities (c6f6fc1b-1b3e-e711-80e1-00155d871bb4)",
       "d8ecc0a0-bf93-ec11-b400-002248273e4f": "Opportunities by Est. Close Date and Est. Revenue",
       "dab5f1ee-6c73-e511-8103-c4346bb5981c": "Top Open Opportunities",
       "de62f04d-4dc0-426d-a340-d56f09859d28": "Project Service Opportunities in Current Fiscal Year",
@@ -416,16 +418,16 @@
     "OptionSetIsGlobal": true,
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "identifypursuitteam",
+        "OptionSetReferenceColumnName": "presentfinalproposal",
         "OptionSetReferenceEntityName": "Opportunities"
       },
       "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "presentfinalproposal",
+        "OptionSetReferenceColumnName": "identifypursuitteam",
         "OptionSetReferenceEntityName": "Opportunities"
       }
     },
     "OptionSetTypeKey": "BooleanType",
-    "RelatedColumnInvariantName": "identifypursuitteam",
+    "RelatedColumnInvariantName": "presentfinalproposal",
     "RelatedEntityName": "Opportunities",
     "Type": "OptionSetInfo"
   },

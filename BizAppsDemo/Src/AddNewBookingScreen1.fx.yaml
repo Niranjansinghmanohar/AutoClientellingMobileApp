@@ -542,7 +542,7 @@ AddNewBookingScreen1 As screen:
 
             DataCardValue55 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =First(Filter(Table5,VariantName=DataCardValue54.Selected.Name)).Price
+                Default: =First(Filter(Table5,VariantName=DataCardValue54.Selected.msauto_name)).Price
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
@@ -615,7 +615,7 @@ AddNewBookingScreen1 As screen:
 
             DataCardValue56 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =First(Filter(Table5,VariantName=DataCardValue54.Selected.Name)).Price
+                Default: =First(Filter(Table5,VariantName=DataCardValue54.Selected.msauto_name)).Price
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
@@ -714,7 +714,7 @@ AddNewBookingScreen1 As screen:
         Color: =RGBA(255, 0, 0, 1)
         Height: =70
         Size: =30
-        Text: ="Rs." & First(Filter(Table5,VariantName=DataCardValue54.Selected.Name)).Price
+        Text: ="Rs." & First(Filter(Table5,VariantName=DataCardValue54.Selected.msauto_name)).Price
         Width: =560
         X: =40
         Y: =929

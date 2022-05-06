@@ -1190,7 +1190,7 @@ LeadDetailScreen As screen:
 
             Image3 As image:
                 Height: =200
-                Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=DataCardValue49.Selected.Name)).ImageURL)),First(Filter(Table2,VariantName=DataCardValue49.Selected.Name)).ImageURL,'Pulsar250_Card-Image-new')
+                Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=DataCardValue49.Selected.msauto_name)).ImageURL)),First(Filter(Table2,VariantName=DataCardValue49.Selected.msauto_name)).ImageURL,'Pulsar250_Card-Image-new')
                 Width: =Parent.Width
                 X: =10
                 Y: =4
@@ -1476,7 +1476,7 @@ LeadDetailScreen As screen:
 
         Image10_1 As image:
             Height: =128
-            Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=ThisItem.'Device Model Booked'.Name)).ImageURL)),First(Filter(Table2,VariantName=ThisItem.'Device Model Booked'.Name)).ImageURL,'default-profile-icon-24')
+            Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=ThisItem.new_DeviceModelBooked.msauto_name)).ImageURL)),First(Filter(Table2,VariantName=ThisItem.new_DeviceModelBooked.msauto_name)).ImageURL,'default-profile-icon-24')
             OnSelect: =Select(Parent)
             Width: =128
             X: =16

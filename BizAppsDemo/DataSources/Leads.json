@@ -114,6 +114,7 @@
       "Lead_BulkDeleteFailures": "Bulk Delete Failures",
       "lead_BulkOperations": "Quick Campaigns (lead_BulkOperations)",
       "lead_CampaignResponses": "Campaign Responses",
+      "lead_chats": "Teams chats",
       "lead_connections1": "Connections (lead_connections1)",
       "lead_connections2": "Connections (lead_connections2)",
       "Lead_DuplicateBaseRecord": "Duplicate Records (Lead_DuplicateBaseRecord)",

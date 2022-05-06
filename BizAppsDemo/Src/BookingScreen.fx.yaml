@@ -81,7 +81,7 @@ BookingScreen As screen:
 
         Image10 As image:
             Height: =128
-            Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=ThisItem.'Device Model Booked'.Name)).ImageURL)),First(Filter(Table2,VariantName=ThisItem.'Device Model Booked'.Name)).ImageURL,'default-profile-icon-24')
+            Image: =If(Not(IsBlank(First(Filter(Table2,VariantName=ThisItem.new_DeviceModelBooked.msauto_name)).ImageURL)),First(Filter(Table2,VariantName=ThisItem.new_DeviceModelBooked.msauto_name)).ImageURL,'default-profile-icon-24')
             OnSelect: =Select(Parent)
             Width: =128
             X: =16

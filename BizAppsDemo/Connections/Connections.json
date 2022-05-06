@@ -1,6 +1,5 @@
 {
   "096c2d72-0b60-4c02-9d6b-bb4b620c2f8f": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_excel/connections/20ff6c7cef2c4b30aec08cb377bc0d8b",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -55,7 +54,6 @@
     "id": "096c2d72-0b60-4c02-9d6b-bb4b620c2f8f"
   },
   "58a662c3-2c1a-4ccb-8144-070ef69b6192": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_microsoftspatialservices/connections/212ecaa8c43e4cfcb227347f7b6d1b69",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -76,7 +74,6 @@
     "id": "58a662c3-2c1a-4ccb-8144-070ef69b6192"
   },
   "9a404dc4-e29d-4f54-b6af-84a095de3602": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness/connections/shared-onedriveforbu-62c052ef-84f4-4b0d-994c-e52497110ec2",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -97,7 +94,6 @@
     "id": "9a404dc4-e29d-4f54-b6af-84a095de3602"
   },
   "be86ba30-8786-4cb7-8789-45cd79381d93": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/0775b15504b34c2eac8b2ace20f15447",
     "connectionParameters": {
       "sku": "Enterprise"
     },

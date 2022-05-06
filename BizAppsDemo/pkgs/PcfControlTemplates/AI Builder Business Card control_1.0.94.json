@@ -379,6 +379,7 @@
   ],
   "ControlConstructor": "BusinessCardReader",
   "ControlNamespace": "Intelligence.BusinessCardReaderControl",
+  "DisplayNameKey": "BusinessCardReader",
   "IncludedProperties": [
     {
       "Category": "design",

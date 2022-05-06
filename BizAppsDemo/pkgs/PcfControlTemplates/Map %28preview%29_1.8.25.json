@@ -536,6 +536,7 @@
       "Required": true
     }
   ],
+  "DisplayNameKey": "Map_Display_Key",
   "Events": [
     {
       "Description": "Geocoded locations",
