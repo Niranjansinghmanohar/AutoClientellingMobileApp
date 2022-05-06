@@ -394,3 +394,59 @@ AddNewBookingScreen3 As screen:
                 Y: =268
                 ZIndex: =4
 
+        DataCard7 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =354
+            Visible: =If(DataCardValue63.Selected.Value='Payment Mode (Opportunities)'.EMI,true,false)
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            Label28_3 As label:
+                Height: =36
+                Size: =21
+                Text: ="Upload Passbook first page"
+                Width: =560
+                X: =34
+                Y: =23
+                ZIndex: =1
+
+            FormProcessor1_1 As FormProcessor:
+                BorderColor: =RGBA(210, 208, 206, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =RGBA(61, 95, 174, 1)
+                FontColor: =RGBA(255, 255, 255, 1)
+                Height: =166
+                ModelId: |-
+                    ="Form Processing 5/6/2022, 12:11:43 PM (5143107f-7838-48eb-9f76-d4aa1744dfcc)"
+                Width: =566
+                X: =34
+                Y: =59
+                ZIndex: =2
+
+            Label28_4 As label:
+                Height: =45
+                Size: =21
+                Text: |-
+                    =Concatenate("Account Number: " ,FormProcessor1_1.Results.'Account Number'.Value)
+                Width: =560
+                X: =40
+                Y: =225
+                ZIndex: =3
+
+            Label28_5 As label:
+                Height: =45
+                Size: =21
+                Text: |-
+                    =Concatenate("Account Holder: " ,FormProcessor1_1.Results.'Account Holder Name'.Value)
+                Width: =560
+                X: =40
+                Y: =270
+                ZIndex: =4
+
