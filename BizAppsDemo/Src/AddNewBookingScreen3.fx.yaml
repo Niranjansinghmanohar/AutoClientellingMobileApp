@@ -360,7 +360,11 @@ AddNewBookingScreen3 As screen:
                 FontColor: =RGBA(255, 255, 255, 1)
                 Height: =166
                 ModelId: ="Bajaj AadharCard FormProcessor Model (b4887d56-2f0f-440f-88d3-59583943270c)"
-                OnChange: =If((!(FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value) && !IsEmpty(FormProcessor1.Results) && !IsEmpty(FormProcessor1_1.Results)),Notify("Details don't match on both documents",NotificationType.Error))
+                OnChange: |+
+                    =If( (!(FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value) && !IsBlankOrError(FormProcessor1.Results.'Full Name'.Value) && !IsBlankOrError(FormProcessor1_1.Results.'Account Holder Name'.Value) ),Notify("Documents could not be validated",NotificationType.Error));
+                    
+                    If( (FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value) ,Notify("Documents validated",NotificationType.Success));
+                    
                 Width: =566
                 X: =30
                 Y: =46
@@ -426,14 +430,18 @@ AddNewBookingScreen3 As screen:
                 Height: =166
                 ModelId: |-
                     ="Form Processing 5/6/2022, 12:11:43 PM (5143107f-7838-48eb-9f76-d4aa1744dfcc)"
-                OnChange: =If((!(FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value) && !IsEmpty(FormProcessor1.Results) && !IsEmpty(FormProcessor1_1.Results)),Notify("Details don't match on both documents",NotificationType.Error))
+                OnChange: |+
+                    =If( (!(FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value) && !IsBlankOrError(FormProcessor1.Results.'Full Name'.Value) && !IsBlankOrError(FormProcessor1_1.Results.'Account Holder Name'.Value) ),Notify("Documents could not be validated",NotificationType.Error));
+                    
+                    If( (FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value) ,Notify("Documents validated",NotificationType.Success));
+                    
                 Width: =566
                 X: =34
                 Y: =59
                 ZIndex: =2
 
             Label28_4 As label:
-                Height: =45
+                Height: =55
                 Size: =21
                 Text: |-
                     =Concatenate("Account Number: " ,FormProcessor1_1.Results.'Account Number'.Value)
@@ -443,12 +451,12 @@ AddNewBookingScreen3 As screen:
                 ZIndex: =3
 
             Label28_5 As label:
-                Height: =45
+                Height: =60
                 Size: =21
                 Text: |-
                     =Concatenate("Account Holder: " ,FormProcessor1_1.Results.'Account Holder Name'.Value)
                 Width: =560
                 X: =40
-                Y: =270
+                Y: =294
                 ZIndex: =4
 
