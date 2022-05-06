@@ -360,6 +360,7 @@ AddNewBookingScreen3 As screen:
                 FontColor: =RGBA(255, 255, 255, 1)
                 Height: =166
                 ModelId: ="Bajaj AadharCard FormProcessor Model (b4887d56-2f0f-440f-88d3-59583943270c)"
+                OnChange: =If(!(FormProcessor1.Results.'Full Name'.Value = FormProcessor1_1.Results.'Account Holder Name'.Value),Notify("Name doesn't match on both documents",NotificationType.Error))
                 Width: =566
                 X: =30
                 Y: =46
