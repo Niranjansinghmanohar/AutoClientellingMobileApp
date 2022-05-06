@@ -452,12 +452,17 @@ AddNewTestRideScreen As screen:
 
             "Map1 As 'Map (preview)'.pcfdataset":
                 BorderColor: =RGBA(0, 18, 107, 1)
+                CurrentLocation: =true
+                CurrentLocationLatitude: =Location.Latitude
+                CurrentLocationLongitude: =Location.Longitude
                 DefaultLatitude: |-
                     =//47.642967
                     Location.Latitude
+                DefaultLocation: =true
                 DefaultLongitude: |-
                     =//-122.126801
                     Location.Longitude
+                DefaultZoomLevel: =16
                 DisplayMode: =DisplayMode.Edit
                 Height: =282
                 Items: =locations

@@ -1558,7 +1558,7 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Indicates whether Sales Mobile Preview has been enabled for the organization (Organizations)",
+    "DisplayName": "Relevance search enabled automatically by Dataverse (Organizations)",
     "Name": "organization_featureenabled",
     "OptionSetInfoNameMapping": {
       "0": "No",
@@ -1568,247 +1568,247 @@
     "OptionSetIsGlobal": false,
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "isresourcebookingexchangesyncenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "ismobileclientondemandsyncenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem10": {
-        "OptionSetReferenceColumnName": "allowlegacyclientexperience",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem11": {
-        "OptionSetReferenceColumnName": "iscontextualemailenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem12": {
-        "OptionSetReferenceColumnName": "sessiontimeoutenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem13": {
-        "OptionSetReferenceColumnName": "isactioncardenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem14": {
-        "OptionSetReferenceColumnName": "ismsteamsenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem15": {
-        "OptionSetReferenceColumnName": "isconflictdetectionenabledformobileclient",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem16": {
-        "OptionSetReferenceColumnName": "isluisenabledford365bot",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem17": {
-        "OptionSetReferenceColumnName": "userratingenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem18": {
-        "OptionSetReferenceColumnName": "newsearchexperienceenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem19": {
-        "OptionSetReferenceColumnName": "defaultteamschattitlerecordname",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem2": {
-        "OptionSetReferenceColumnName": "iscontextualhelpenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem20": {
-        "OptionSetReferenceColumnName": "sendbulkemailinuci",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem21": {
-        "OptionSetReferenceColumnName": "enableunifiedinterfaceshellrefresh",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem22": {
-        "OptionSetReferenceColumnName": "issalesmobilepreviewenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem23": {
-        "OptionSetReferenceColumnName": "improvesearchloggingenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem24": {
-        "OptionSetReferenceColumnName": "advancedlookupenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem25": {
-        "OptionSetReferenceColumnName": "enablelivepersoncardintegrationinoffice",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem26": {
-        "OptionSetReferenceColumnName": "enablecalendarimportexport",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem27": {
-        "OptionSetReferenceColumnName": "advancedcolumnfilteringenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem28": {
-        "OptionSetReferenceColumnName": "modernadvancedfindfiltering",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem29": {
-        "OptionSetReferenceColumnName": "sessionrecordingenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem3": {
-        "OptionSetReferenceColumnName": "orginsightsenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem30": {
-        "OptionSetReferenceColumnName": "productrecommendationsenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem31": {
-        "OptionSetReferenceColumnName": "ispreviewforautocaptureenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem32": {
-        "OptionSetReferenceColumnName": "issalesassistantenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem33": {
-        "OptionSetReferenceColumnName": "isembedteamscollabenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem34": {
-        "OptionSetReferenceColumnName": "enablesensitivitylabelsforteamscollab",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem35": {
-        "OptionSetReferenceColumnName": "isnewaddproductexperienceenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem36": {
-        "OptionSetReferenceColumnName": "enablecanvasappsinsolutionsbydefault",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem37": {
-        "OptionSetReferenceColumnName": "isnotesanalysisenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem38": {
-        "OptionSetReferenceColumnName": "salesmobileuseuciformsforcreate",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem39": {
-        "OptionSetReferenceColumnName": "isdelveactionhubintegrationenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem4": {
-        "OptionSetReferenceColumnName": "ispricelistmandatory",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem40": {
-        "OptionSetReferenceColumnName": "enablemakerswitchtoclassic",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem41": {
-        "OptionSetReferenceColumnName": "isfolderautocreatedonsp",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem42": {
-        "OptionSetReferenceColumnName": "iscontentsecuritypolicyenabledforcanvas",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem43": {
-        "OptionSetReferenceColumnName": "ispaienabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem44": {
-        "OptionSetReferenceColumnName": "ismodeldrivenappsinmsteamsenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem45": {
-        "OptionSetReferenceColumnName": "servestaticresourcesfromazurecdn",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem46": {
-        "OptionSetReferenceColumnName": "salesmobileuseuciformsforview",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem47": {
-        "OptionSetReferenceColumnName": "allowlegacydialogsembedding",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem48": {
-        "OptionSetReferenceColumnName": "usequickfindviewforgridsearch",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem49": {
-        "OptionSetReferenceColumnName": "inactivitytimeoutenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem5": {
-        "OptionSetReferenceColumnName": "isactivityanalysisenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem50": {
-        "OptionSetReferenceColumnName": "isbpfentitycustomizationfeatureenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem51": {
-        "OptionSetReferenceColumnName": "ismsteamscollaborationenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem52": {
-        "OptionSetReferenceColumnName": "isactionsupportfeatureenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem53": {
-        "OptionSetReferenceColumnName": "allowredirectadminsettingstomodernui",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem54": {
-        "OptionSetReferenceColumnName": "ismanualsalesforecastingenabled",
-        "OptionSetReferenceEntityName": "Organizations"
-      },
-      "OptionSetReferenceItem55": {
         "OptionSetReferenceColumnName": "advancedcolumneditorenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem56": {
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "advancedcolumnfilteringenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem10": {
+        "OptionSetReferenceColumnName": "ispricelistmandatory",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem11": {
+        "OptionSetReferenceColumnName": "ismobileclientondemandsyncenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem12": {
+        "OptionSetReferenceColumnName": "enablesensitivitylabelsforteamscollab",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem13": {
+        "OptionSetReferenceColumnName": "isembedteamscollabenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem14": {
+        "OptionSetReferenceColumnName": "iscustomcontrolsincanvasappsenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem15": {
+        "OptionSetReferenceColumnName": "advancedlookupenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem16": {
+        "OptionSetReferenceColumnName": "ismsteamsusersyncenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem17": {
+        "OptionSetReferenceColumnName": "relevancesearchenabledbyplatform",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem18": {
+        "OptionSetReferenceColumnName": "isplaybookenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem19": {
+        "OptionSetReferenceColumnName": "recalculatesla",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "allowredirectadminsettingstomodernui",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem20": {
         "OptionSetReferenceColumnName": "allowusershidingsystemviews",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem57": {
+      "OptionSetReferenceItem21": {
+        "OptionSetReferenceColumnName": "textanalyticsenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem22": {
+        "OptionSetReferenceColumnName": "isactionsupportfeatureenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem23": {
+        "OptionSetReferenceColumnName": "iscontextualhelpenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem24": {
+        "OptionSetReferenceColumnName": "isnewaddproductexperienceenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem25": {
+        "OptionSetReferenceColumnName": "ispreviewforautocaptureenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem26": {
+        "OptionSetReferenceColumnName": "ispreviewenabledforactioncard",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem27": {
+        "OptionSetReferenceColumnName": "isresourcebookingexchangesyncenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem28": {
+        "OptionSetReferenceColumnName": "sendbulkemailinuci",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem29": {
+        "OptionSetReferenceColumnName": "servestaticresourcesfromazurecdn",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem3": {
+        "OptionSetReferenceColumnName": "isdelveactionhubintegrationenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem30": {
+        "OptionSetReferenceColumnName": "enablecanvasappsinsolutionsbydefault",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem31": {
         "OptionSetReferenceColumnName": "isautodatacaptureenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem58": {
-        "OptionSetReferenceColumnName": "isautodatacapturev2enabled",
+      "OptionSetReferenceItem32": {
+        "OptionSetReferenceColumnName": "sessionrecordingenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem59": {
-        "OptionSetReferenceColumnName": "iswriteinproductsallowed",
+      "OptionSetReferenceItem33": {
+        "OptionSetReferenceColumnName": "inactivitytimeoutenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem6": {
-        "OptionSetReferenceColumnName": "paipreviewscenarioenabled",
+      "OptionSetReferenceItem34": {
+        "OptionSetReferenceColumnName": "advancedfilteringenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem60": {
+      "OptionSetReferenceItem35": {
         "OptionSetReferenceColumnName": "isrelationshipinsightsenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
-      "OptionSetReferenceItem61": {
+      "OptionSetReferenceItem36": {
+        "OptionSetReferenceColumnName": "iscontentsecuritypolicyenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem37": {
+        "OptionSetReferenceColumnName": "allowlegacyclientexperience",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem38": {
+        "OptionSetReferenceColumnName": "iswriteinproductsallowed",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem39": {
+        "OptionSetReferenceColumnName": "ismsteamscollaborationenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem4": {
+        "OptionSetReferenceColumnName": "salesmobileuseuciformsforview",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem40": {
+        "OptionSetReferenceColumnName": "isfolderautocreatedonsp",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem41": {
+        "OptionSetReferenceColumnName": "issalesassistantenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem42": {
+        "OptionSetReferenceColumnName": "productrecommendationsenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem43": {
+        "OptionSetReferenceColumnName": "enablecalendarimportexport",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem44": {
+        "OptionSetReferenceColumnName": "modernadvancedfindfiltering",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem45": {
+        "OptionSetReferenceColumnName": "ismanualsalesforecastingenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem46": {
+        "OptionSetReferenceColumnName": "enablelivepersoncardintegrationinoffice",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem47": {
+        "OptionSetReferenceColumnName": "enableunifiedinterfaceshellrefresh",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem48": {
+        "OptionSetReferenceColumnName": "allowlegacydialogsembedding",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem49": {
+        "OptionSetReferenceColumnName": "salesmobileuseuciformsforcreate",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem5": {
+        "OptionSetReferenceColumnName": "isbpfentitycustomizationfeatureenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem50": {
+        "OptionSetReferenceColumnName": "orginsightsenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem51": {
+        "OptionSetReferenceColumnName": "isactioncardenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem52": {
+        "OptionSetReferenceColumnName": "isnotesanalysisenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem53": {
+        "OptionSetReferenceColumnName": "enablemakerswitchtoclassic",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem54": {
+        "OptionSetReferenceColumnName": "isautodatacapturev2enabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem55": {
+        "OptionSetReferenceColumnName": "ismodeldrivenappsinmsteamsenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem56": {
+        "OptionSetReferenceColumnName": "ispaienabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem57": {
+        "OptionSetReferenceColumnName": "improvesearchloggingenabled",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem58": {
+        "OptionSetReferenceColumnName": "canoptoutnewsearchexperience",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem59": {
+        "OptionSetReferenceColumnName": "enableunifiedclientcdn",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem6": {
         "OptionSetReferenceColumnName": "quickactiontoopenrecordsinsidepaneenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
+      "OptionSetReferenceItem60": {
+        "OptionSetReferenceColumnName": "isallmoneydecimal",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
+      "OptionSetReferenceItem61": {
+        "OptionSetReferenceColumnName": "usequickfindviewforgridsearch",
+        "OptionSetReferenceEntityName": "Organizations"
+      },
       "OptionSetReferenceItem62": {
-        "OptionSetReferenceColumnName": "isrichtextnotesenabled",
+        "OptionSetReferenceColumnName": "iscontentsecuritypolicyenabledforcanvas",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem63": {
-        "OptionSetReferenceColumnName": "canoptoutnewsearchexperience",
+        "OptionSetReferenceColumnName": "isluisenabledford365bot",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem64": {
@@ -1816,39 +1816,39 @@
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem65": {
-        "OptionSetReferenceColumnName": "isplaybookenabled",
+        "OptionSetReferenceColumnName": "defaultteamschattitlerecordname",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem66": {
-        "OptionSetReferenceColumnName": "ismsteamsusersyncenabled",
+        "OptionSetReferenceColumnName": "isconflictdetectionenabledformobileclient",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem67": {
-        "OptionSetReferenceColumnName": "isquickcreateenabledforopportunityclose",
+        "OptionSetReferenceColumnName": "sessiontimeoutenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem68": {
-        "OptionSetReferenceColumnName": "iscustomcontrolsincanvasappsenabled",
+        "OptionSetReferenceColumnName": "isrichtextnotesenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem69": {
-        "OptionSetReferenceColumnName": "ispreviewenabledforactioncard",
+        "OptionSetReferenceColumnName": "userratingenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem7": {
-        "OptionSetReferenceColumnName": "textanalyticsenabled",
+        "OptionSetReferenceColumnName": "newsearchexperienceenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem70": {
-        "OptionSetReferenceColumnName": "advancedfilteringenabled",
+        "OptionSetReferenceColumnName": "ismsteamsenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem71": {
-        "OptionSetReferenceColumnName": "recalculatesla",
+        "OptionSetReferenceColumnName": "iscontextualemailenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem72": {
-        "OptionSetReferenceColumnName": "iscontentsecuritypolicyenabled",
+        "OptionSetReferenceColumnName": "paipreviewscenarioenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem73": {
@@ -1856,20 +1856,20 @@
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem74": {
-        "OptionSetReferenceColumnName": "relevancesearchenabledbyplatform",
+        "OptionSetReferenceColumnName": "issalesmobilepreviewenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem8": {
-        "OptionSetReferenceColumnName": "enableunifiedclientcdn",
+        "OptionSetReferenceColumnName": "isactivityanalysisenabled",
         "OptionSetReferenceEntityName": "Organizations"
       },
       "OptionSetReferenceItem9": {
-        "OptionSetReferenceColumnName": "isallmoneydecimal",
+        "OptionSetReferenceColumnName": "isquickcreateenabledforopportunityclose",
         "OptionSetReferenceEntityName": "Organizations"
       }
     },
     "OptionSetTypeKey": "BooleanType",
-    "RelatedColumnInvariantName": "isresourcebookingexchangesyncenabled",
+    "RelatedColumnInvariantName": "advancedcolumneditorenabled",
     "RelatedEntityName": "Organizations",
     "Type": "OptionSetInfo"
   },
