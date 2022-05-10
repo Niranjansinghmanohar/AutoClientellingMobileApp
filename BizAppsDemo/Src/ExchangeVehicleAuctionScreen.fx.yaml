@@ -1,0 +1,30 @@
+ExchangeVehicleAuctionScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+    OnVisible: |-
+        =ClearCollect(AuctionBids,{Value:"Rs.40000"},{Value:"Rs.39000"},{Value:"Rs.37600"})
+
+    Rectangle1_23 As rectangle:
+        Height: =73
+        Width: =640
+        ZIndex: =1
+
+    Icon1_21 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_25 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =62
+        Size: =20
+        Text: ="AUCTION DETAILS"
+        Width: =387
+        X: =126
+        Y: =11
+        ZIndex: =7
+
