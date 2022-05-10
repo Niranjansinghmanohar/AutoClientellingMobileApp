@@ -1125,6 +1125,7 @@ AddExchangeVehicleScreen As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue60.Selected
+            Visible: =false
             Width: =640
             X: =0
             Y: =16

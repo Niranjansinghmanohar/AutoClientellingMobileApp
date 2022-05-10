@@ -97,7 +97,7 @@ ExchangeInventoryScreen As screen:
         Fill: =RGBA(204, 204, 204, 1)
         Height: =79
         Icon: =Icon.Add
-        OnSelect: =ResetForm(Form12);Navigate(AddExchangeVehicleScreen);
+        OnSelect: =ResetForm(Form12);Set(ExchangeContactParam,Blank());Set(ExchangeLeadParam,Blank());Navigate(AddExchangeVehicleScreen);
         Tooltip: ="Add new Lead"
         Width: =116
         X: =523
