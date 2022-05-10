@@ -45,7 +45,7 @@ ExchangeInventoryScreen As screen:
         Icon9_2 As icon.ChevronRight:
             Height: =56
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);Set(EditExchangeVehicleItem,ThisItem);Navigate(EditExchangeVehicleScreen);
+            OnSelect: =Select(Parent);Set(EditExchangeVehicleItem,ThisItem);ResetForm(Form12_1);Navigate(EditExchangeVehicleScreen);
             Width: =38
             X: =590
             Y: =46

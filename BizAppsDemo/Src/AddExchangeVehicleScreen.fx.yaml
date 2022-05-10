@@ -1708,7 +1708,7 @@ AddExchangeVehicleScreen As screen:
                 Notify(
                     "Success",
                     NotificationType.Success
-                );Navigate(ExchangeInventoryScreen),
+                );Set(EditExchangeVehicleItem,Form12.LastSubmit);ResetForm(Form12_1);Navigate(EditExchangeVehicleScreen),
                 Notify(
                     First(Errors('Exchange Vehicles')).Message,
                     NotificationType.Error
