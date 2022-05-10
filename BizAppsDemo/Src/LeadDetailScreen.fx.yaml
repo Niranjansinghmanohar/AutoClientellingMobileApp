@@ -15,6 +15,7 @@ LeadDetailScreen As screen:
             false
         );
         Set(BookingVisible,false);
+        Set(ExchangeVisible,false);
         Set(FormLeadItem,LookUp(Leads,Lead=Gallery2.Selected.Lead));
 
     Rectangle1_8 As rectangle:
@@ -56,15 +57,16 @@ LeadDetailScreen As screen:
     "Gallery6 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
         Height: =75
         Items: |-
-            =Table({ID:"1",Name:"PROFILE"},{ID:"2",Name:"MOTORCYCLE"},{ID:"3",Name:"TEST RIDE"},{ID:"4",Name:"BOOKING"})
+            =Table({ID:"1",Name:"PROFILE"},{ID:"2",Name:"MOTORCYCLE"},{ID:"3",Name:"TEST RIDE"},{ID:"4",Name:"BOOKING"},{ID:"5",Name:"EXCHANGE"})
         OnSelect: |
-            =If(ThisItem.Name="PROFILE",Set(ProfileFormVisible,true);Set(MotorCycleFormVisible,false);Set(TestrideGridVisible,false);Set(BookingVisible,false));
-            If(ThisItem.Name="MOTORCYCLE",Set(MotorCycleFormVisible,true);Set(ProfileFormVisible,false);Set(TestrideGridVisible,false);Set(BookingVisible,false));
-            If(ThisItem.Name="TEST RIDE",Set(TestrideGridVisible,true);Set(MotorCycleFormVisible,false);Set(ProfileFormVisible,false);Set(BookingVisible,false));
-            If(ThisItem.Name="BOOKING",Set(TestrideGridVisible,false);Set(MotorCycleFormVisible,false);Set(ProfileFormVisible,false);Set(BookingVisible,true));
+            =If(ThisItem.Name="PROFILE",Set(ProfileFormVisible,true);Set(MotorCycleFormVisible,false);Set(TestrideGridVisible,false);Set(BookingVisible,false);Set(ExchangeVisible,false));
+            If(ThisItem.Name="MOTORCYCLE",Set(MotorCycleFormVisible,true);Set(ProfileFormVisible,false);Set(TestrideGridVisible,false);Set(BookingVisible,false);Set(ExchangeVisible,false));
+            If(ThisItem.Name="TEST RIDE",Set(TestrideGridVisible,true);Set(MotorCycleFormVisible,false);Set(ProfileFormVisible,false);Set(BookingVisible,false);Set(ExchangeVisible,false));
+            If(ThisItem.Name="BOOKING",Set(TestrideGridVisible,false);Set(MotorCycleFormVisible,false);Set(ProfileFormVisible,false);Set(BookingVisible,true);Set(ExchangeVisible,false));
+            If(ThisItem.Name="EXCHANGE",Set(TestrideGridVisible,false);Set(MotorCycleFormVisible,false);Set(ProfileFormVisible,false);Set(BookingVisible,false);Set(ExchangeVisible,true));
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =Self.Width/4
+        TemplateSize: =Self.Width/5
         Y: =248
         ZIndex: =6
 
@@ -1637,4 +1639,100 @@ LeadDetailScreen As screen:
         X: =126
         Y: =941
         ZIndex: =22
+
+    Button19 As button:
+        Fill: =RGBA(184, 0, 0, 1)
+        Height: =60
+        OnSelect: |-
+            =Set(
+                ExchangeContactParam,
+                FormLeadItem.'Parent Contact for lead'
+            );
+            ResetForm(Form12);
+            Navigate(AddExchangeVehicleScreen);
+        Size: =24
+        Text: ="Add Exchange Vehicle"
+        Visible: =ExchangeVisible
+        Width: =376
+        X: =137
+        Y: =355
+        ZIndex: =23
+
+    "Gallery14 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =581
+        Items: =Sort(Filter('Exchange Vehicles',Seller.'Contact (contactid)'=FormLeadItem.'Parent Contact for lead'.'Contact (contactid)') ,'Modified On',Descending)
+        Layout: =Layout.Vertical
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Visible: =ExchangeVisible
+        Y: =436
+        ZIndex: =24
+
+        Image14 As image:
+            Height: =128
+            Image: =ThisItem.'Primary Image'
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title10 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image14.Width - 104
+            X: =167
+            Y: =14
+            ZIndex: =2
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator12 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label31 As label:
+            Height: =45
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'KMs Driven' & " kms"
+            Width: =398
+            X: =167
+            Y: =50
+            ZIndex: =6
+
+        Label33 As label:
+            Height: =54
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Expected : Rs."&ThisItem.'Expected Selling Price'
+            Width: =408
+            X: =167
+            Y: =90
+            ZIndex: =7
 

@@ -1072,7 +1072,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue87 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
+                DefaultSelectedItems: =ExchangeContactParam
                 DisplayFields: =["fullname"]
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
