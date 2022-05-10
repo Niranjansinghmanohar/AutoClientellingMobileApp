@@ -122,6 +122,7 @@
     "ExchangeInventoryScreen",
     "AddExchangeVehicleScreen",
     "EditExchangeVehicleScreen",
-    "ExchangeVehicleAuctionScreen"
+    "ExchangeVehicleAuctionScreen",
+    "IncentiveScreen"
   ]
 }

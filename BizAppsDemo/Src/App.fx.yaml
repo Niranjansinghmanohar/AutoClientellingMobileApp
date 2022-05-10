@@ -50,7 +50,7 @@ App As appinfo:
                     ID: "7",
                     Title: "INCENTIVE",
                     Icon: Icon.Money,
-                    Screen: ExchangeInventoryScreen,
+                    Screen: IncentiveScreen,           
                     Image: 'incentive-removebg-preview'
                 }/*,
                 {

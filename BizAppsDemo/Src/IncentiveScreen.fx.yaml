@@ -1,0 +1,168 @@
+IncentiveScreen As screen:
+    BackgroundImage: =
+    Fill: =RGBA(255, 255, 255, 1)
+
+    Rectangle1_24 As rectangle:
+        Height: =73
+        Width: =640
+        ZIndex: =1
+
+    Icon1_22 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        X: =13
+        Y: =9
+        ZIndex: =3
+
+    Label4_26 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =62
+        Size: =20
+        Text: ="MY PERFORMANCE"
+        Width: =387
+        X: =126
+        Y: =11
+        ZIndex: =7
+
+    "Gallery4_7 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        Fill: =RGBA(204, 204, 204, 1)
+        Height: =117
+        Items: =MenuItems
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =Self.Height + 10
+        Y: =1019
+        ZIndex: =9
+
+        Image5_7 As image:
+            Height: =Parent.TemplateHeight/2
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth/2
+            X: =Parent.TemplateWidth/4
+            Y: =Parent.TemplateHeight/5
+            ZIndex: =1
+
+        Label7_7 As label:
+            Align: =Align.Center
+            Height: =Parent.TemplateHeight*0.2
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Title
+            Width: =Parent.TemplateWidth
+            X: |
+                =0
+            Y: =93.6
+            ZIndex: =2
+
+    Label35 As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =76
+        Size: =24
+        Text: ="Rs.15,00,000"
+        Width: =246
+        Y: =255
+        ZIndex: =11
+
+    Label35_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =76
+        Size: =24
+        Text: ="Rs.12,00,000"
+        Width: =256
+        X: =384
+        Y: =255
+        ZIndex: =12
+
+    Label35_2 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =133
+        Size: =40
+        Text: ="80 %"
+        Width: =204
+        X: =218
+        Y: =122
+        ZIndex: =13
+
+    Label35_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(184, 0, 0, 1)
+        Height: =53
+        Size: =24
+        Text: ="TARGET"
+        Width: =246
+        Y: =331
+        ZIndex: =14
+
+    Label35_4 As label:
+        Align: =Align.Center
+        Color: =RGBA(54, 176, 75, 1)
+        Height: =53
+        Size: =24
+        Text: ="ACTUAL"
+        Width: =246
+        X: =394
+        Y: =331
+        ZIndex: =15
+
+    Label36 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =73
+        Size: =30
+        Text: ="EARNINGS"
+        Width: =640
+        Y: =496
+        ZIndex: =16
+
+    Icon20 As icon.Money:
+        Icon: =Icon.Money
+        X: =62
+        Y: =628
+        ZIndex: =17
+
+    Label35_5 As label:
+        Height: =76
+        Size: =24
+        Text: ="Rs.10,000 (commission)"
+        Width: =429
+        X: =176
+        Y: =616
+        ZIndex: =18
+
+    Icon21 As icon.Ribbon:
+        Icon: =Icon.Ribbon
+        X: =62
+        Y: =730
+        ZIndex: =19
+
+    Label35_6 As label:
+        Height: =76
+        Size: =24
+        Text: ="Rs.5,000 (bonus)"
+        Width: =429
+        X: =176
+        Y: =718
+        ZIndex: =20
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =1
+        Width: =640
+        Y: =570
+        ZIndex: =21
+
+    Rectangle3_1 As rectangle:
+        Fill: =RGBA(0, 0, 0, 1)
+        Height: =1
+        Width: =640
+        Y: =495
+        ZIndex: =22
+
