@@ -2,7 +2,7 @@ ExchangeVehicleAuctionScreen As screen:
     BackgroundImage: =
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =ClearCollect(AuctionBids,{Value:"Rs.40000"},{Value:"Rs.39000"},{Value:"Rs.37600"})
+        =ClearCollect(AuctionBids,{Value:"Rs.40000",BidOn:"10/05/2022 11:11:00"},{Value:"Rs.39000",BidOn:"09/05/2022 22:11:00"},{Value:"Rs.37600",BidOn:"09/05/2022 11:11:00"})
 
     Rectangle1_23 As rectangle:
         Height: =73
@@ -27,4 +27,41 @@ ExchangeVehicleAuctionScreen As screen:
         X: =126
         Y: =11
         ZIndex: =7
+
+    "Gallery16 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =1063
+        Items: =AuctionBids
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Y: =73
+        ZIndex: =8
+
+        Separator14 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
+        Label37 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =25
+            Text: =ThisItem.Value
+            Width: =560
+            X: =60
+            Y: =29
+            ZIndex: =6
+
+        Label38 As label:
+            Align: =Align.Right
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.BidOn
+            Width: =560
+            X: =60
+            Y: =82
+            ZIndex: =7
 
