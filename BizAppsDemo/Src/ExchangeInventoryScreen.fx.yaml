@@ -45,7 +45,7 @@ ExchangeInventoryScreen As screen:
         Icon9_2 As icon.ChevronRight:
             Height: =56
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);
+            OnSelect: =Select(Parent);Set(EditExchangeVehicleItem,ThisItem);Navigate(EditExchangeVehicleScreen);
             Width: =38
             X: =590
             Y: =46
@@ -55,9 +55,9 @@ ExchangeInventoryScreen As screen:
             Height: =43
             OnSelect: =Select(Parent)
             Size: =21
-            Text: =ThisItem.'Make Year' & " " & ThisItem.Make & " " & ThisItem.Model
-            Width: =432
-            X: =144
+            Text: =ThisItem.Name
+            Width: =350
+            X: =160
             Y: =16
             ZIndex: =14
 
@@ -66,8 +66,8 @@ ExchangeInventoryScreen As screen:
             OnSelect: =Select(Parent)
             Size: =21
             Text: =ThisItem.'KMs Driven' & " kms"
-            Width: =432
-            X: =144
+            Width: =350
+            X: =160
             Y: =59
             ZIndex: =15
 
@@ -77,8 +77,8 @@ ExchangeInventoryScreen As screen:
             Size: =21
             Text: |-
                 ="Expected : Rs."&ThisItem.'Expected Selling Price'
-            Width: =432
-            X: =144
+            Width: =350
+            X: =160
             Y: =102
             ZIndex: =16
 
@@ -97,7 +97,7 @@ ExchangeInventoryScreen As screen:
         Fill: =RGBA(204, 204, 204, 1)
         Height: =79
         Icon: =Icon.Add
-        OnSelect: =Set(TestDriveLeadParam,Blank());Set(TestDriveContactParam,Blank());ResetForm(Form2);Navigate(AddNewTestRideScreen);
+        OnSelect: =ResetForm(Form12);Navigate(AddExchangeVehicleScreen);
         Tooltip: ="Add new Lead"
         Width: =116
         X: =523

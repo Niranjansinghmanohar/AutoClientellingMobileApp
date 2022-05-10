@@ -119,6 +119,8 @@
     "EditTestDrive",
     "CompleteTestDrive1",
     "CompleteTestDrive2",
-    "ExchangeInventoryScreen"
+    "ExchangeInventoryScreen",
+    "AddExchangeVehicleScreen",
+    "EditExchangeVehicleScreen"
   ]
 }

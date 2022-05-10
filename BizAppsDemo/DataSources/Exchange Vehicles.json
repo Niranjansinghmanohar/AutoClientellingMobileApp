@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "new_exchangevehicle",
+    "MaxGetRowsCount": 500,
     "Name": "Exchange Vehicles",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner (_ownerid_value)",
@@ -36,6 +37,7 @@
       "new_expectedsellingprice": "Expected Selling Price",
       "new_expectedsellingprice_base": "Expected Selling Price (Base)",
       "new_kmsdriven": "KMs Driven",
+      "new_Lead": "Lead",
       "new_make": "Make",
       "new_makemonth": "Make Month",
       "new_makeyear": "Make Year",
@@ -47,6 +49,7 @@
       "new_primaryimageid": "new_PrimaryImageId",
       "new_registrationtype": "Registration Type",
       "new_scratches": "Scratches",
+      "new_Seller": "Seller",
       "new_state": "State",
       "new_surfacerust": "Surface Rust",
       "new_taildamage": "Tail Damage",

@@ -203,7 +203,7 @@ EditTestDrive As screen:
         FontWeight: =FontWeight.Bold
         Height: =54
         Size: =21
-        Text: =LookUp('Test Drives','Test Drive'= EditTestDriveItem.'Test Drive','Device Model'.Name)
+        Text: =LookUp('Test Drives',msauto_testdriveid= EditTestDriveItem.'Test Drive',msauto_DeviceModelId.msauto_name)
         Width: =344
         X: =285
         Y: =168
@@ -223,7 +223,7 @@ EditTestDrive As screen:
         FontWeight: =FontWeight.Bold
         Height: =54
         Size: =21
-        Text: =LookUp('Test Drives','Test Drive'= EditTestDriveItem.'Test Drive', Contact.'Full Name')
+        Text: =LookUp('Test Drives',msauto_testdriveid= EditTestDriveItem.'Test Drive', msauto_contactid.fullname)
         Width: =344
         X: =284
         Y: =114

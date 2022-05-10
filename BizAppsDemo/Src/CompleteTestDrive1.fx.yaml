@@ -30,7 +30,7 @@ CompleteTestDrive1 As screen:
         AcceptsFocus: =false
         DataSource: ='Test Drives'
         Height: =432
-        Item: =LookUp('Test Drives', 'Test Drive'= EditTestDriveItem.'Test Drive')
+        Item: =LookUp('Test Drives', msauto_testdriveid= EditTestDriveItem.'Test Drive')
         Width: =640
         Y: =73
         ZIndex: =8
