@@ -386,6 +386,7 @@
       "new_contact_msauto_serviceappointment_CustomerContact": "Service Appointments (new_contact_msauto_serviceappointment_CustomerContact)",
       "new_contact_msauto_testdrive_SalesExecutive": "Test Drives (new_contact_msauto_testdrive_SalesExecutive)",
       "new_contact_msdyn_workorder_Technician": "Work Orders (new_contact_msdyn_workorder_Technician)",
+      "new_ExchangeVehicle_Seller_Contact": "Exchange Vehicles",
       "nickname": "Nickname",
       "numberofchildren": "No. of Children",
       "onholdtime": "On Hold Time (Minutes)",

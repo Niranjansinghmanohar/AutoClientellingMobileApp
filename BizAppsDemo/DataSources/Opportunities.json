@@ -418,16 +418,16 @@
     "OptionSetIsGlobal": true,
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "presentfinalproposal",
+        "OptionSetReferenceColumnName": "identifypursuitteam",
         "OptionSetReferenceEntityName": "Opportunities"
       },
       "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "identifypursuitteam",
+        "OptionSetReferenceColumnName": "presentfinalproposal",
         "OptionSetReferenceEntityName": "Opportunities"
       }
     },
     "OptionSetTypeKey": "BooleanType",
-    "RelatedColumnInvariantName": "presentfinalproposal",
+    "RelatedColumnInvariantName": "identifypursuitteam",
     "RelatedEntityName": "Opportunities",
     "Type": "OptionSetInfo"
   },

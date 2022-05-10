@@ -169,17 +169,17 @@
       }
     },
     {
-      "Kind": "default.cds_bulkdeleteoperation_forms",
-      "Namespace": "Bulk Delete Operations (Forms)",
-      "Values": {
-        "Information": "cf6efbf9-bff7-463c-a476-24496ac96b69"
-      }
-    },
-    {
       "Kind": "default.cds_new_exchangevehicle_forms",
       "Namespace": "Exchange Vehicles (Forms)",
       "Values": {
         "Information": "3f870815-d0bd-4783-9e2c-7adfe5a904f7"
+      }
+    },
+    {
+      "Kind": "default.cds_bulkdeleteoperation_forms",
+      "Namespace": "Bulk Delete Operations (Forms)",
+      "Values": {
+        "Information": "cf6efbf9-bff7-463c-a476-24496ac96b69"
       }
     }
   ]

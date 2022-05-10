@@ -38,6 +38,13 @@ App As appinfo:
                     Icon: Icon.Money,
                     Screen: BookingScreen,
                     Image: cart
+                },
+                {
+                    ID: "6",
+                    Title: "EXCHANGE",
+                    Icon: Icon.Money,
+                    Screen: ExchangeInventoryScreen,
+                    Image: 'exchangevehicle (2)'
                 }/*,
                 {
                     ID: "6",
