@@ -118,6 +118,7 @@
     "AddNewTestRideScreen",
     "EditTestDrive",
     "CompleteTestDrive1",
-    "CompleteTestDrive2"
+    "CompleteTestDrive2",
+    "ExchangeInventoryScreen"
   ]
 }

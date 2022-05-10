@@ -1,0 +1,315 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "new_exchangevehicles",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "new_exchangevehicle",
+    "Name": "Exchange Vehicles",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner (_ownerid_value)",
+      "{Attachments}": "Attachments",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "new_addressline1": "Address Line1",
+      "new_addressline2": "Address Line 2",
+      "new_addressline3": "Address Line 3",
+      "new_city": "City",
+      "new_colour": "Colour",
+      "new_exchangevehicle_Annotations": "Notes",
+      "new_exchangevehicle_AsyncOperations": "System Jobs",
+      "new_exchangevehicle_BulkDeleteFailures": "Bulk Delete Failures",
+      "new_exchangevehicle_DuplicateBaseRecord": "Duplicate Records (new_exchangevehicle_DuplicateBaseRecord)",
+      "new_exchangevehicle_DuplicateMatchingRecord": "Duplicate Records (new_exchangevehicle_DuplicateMatchingRecord)",
+      "new_exchangevehicle_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "new_exchangevehicle_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "new_exchangevehicle_ProcessSession": "Process Sessions",
+      "new_exchangevehicle_SyncErrors": "Sync Errors",
+      "new_exchangevehicleid": "Exchange Vehicle",
+      "new_expectedsellingprice": "Expected Selling Price",
+      "new_expectedsellingprice_base": "Expected Selling Price (Base)",
+      "new_kmsdriven": "KMs Driven",
+      "new_make": "Make",
+      "new_makemonth": "Make Month",
+      "new_makeyear": "Make Year",
+      "new_model": "Model",
+      "new_name": "Name",
+      "new_owner": "Owner (new_owner)",
+      "new_pincode": "Pincode",
+      "new_primaryimage": "Primary Image",
+      "new_primaryimageid": "new_PrimaryImageId",
+      "new_registrationtype": "Registration Type",
+      "new_scratches": "Scratches",
+      "new_state": "State",
+      "new_surfacerust": "Surface Rust",
+      "new_taildamage": "Tail Damage",
+      "new_version": "Version",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Exchange Vehicles",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Exchange Vehicles (Views)",
+    "Name": "_new_exchangevehicle_views",
+    "RelatedEntityName": "Exchange Vehicles",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "04cffb28-1cfa-449a-8c79-cd977905c157": "Exchange Vehicle Advanced Find View",
+      "1d651717-4841-479b-9244-a77adcbbc67d": "Exchange Vehicle Lookup View",
+      "23137177-f2fa-489b-a66b-7b2bc72236d6": "Exchange Vehicle Associated View",
+      "9bb773a0-7671-428d-9e73-13b068546767": "Active Exchange Vehicles",
+      "af5f5219-c56a-411e-81b6-5dd657fb154d": "Inactive Exchange Vehicles"
+    }
+  },
+  {
+    "DisplayName": "Colour",
+    "Name": "new_colour",
+    "OptionSetInfoNameMapping": {
+      "100000000": "White",
+      "100000001": "Black",
+      "100000002": "Blue",
+      "100000003": "Green",
+      "100000004": "Red",
+      "100000005": "Yellow",
+      "100000006": "Orange",
+      "100000007": "Gray",
+      "100000008": "Others"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_colour",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_colour",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Exchange Vehicles)",
+    "Name": "new_exchangevehicle_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Exchange Vehicles)",
+    "Name": "new_exchangevehicle_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Make Month",
+    "Name": "new_makemonth",
+    "OptionSetInfoNameMapping": {
+      "100000000": "January",
+      "100000001": "February",
+      "100000002": "March",
+      "100000003": "April",
+      "100000004": "May",
+      "100000005": "June",
+      "100000006": "July",
+      "100000007": "August",
+      "100000008": "September",
+      "100000009": "October",
+      "100000010": "November",
+      "100000011": "December"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_makemonth",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_makemonth",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Make Year",
+    "Name": "new_makeyear",
+    "OptionSetInfoNameMapping": {
+      "100000000": "2022",
+      "100000001": "2021",
+      "100000002": "2020",
+      "100000003": "2019",
+      "100000004": "2018",
+      "100000005": "2017",
+      "100000006": "2016",
+      "100000007": "2015",
+      "100000008": "2014",
+      "100000009": "2013",
+      "100000010": "2012",
+      "100000011": "2011",
+      "100000012": "2010",
+      "100000013": "older than 2010"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_makeyear",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_makeyear",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Scratches (Exchange Vehicles)",
+    "Name": "new_new_exchangevehicle_scratches",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_scratches",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "new_scratches",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Surface Rust (Exchange Vehicles)",
+    "Name": "new_new_exchangevehicle_surfacerust",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_surfacerust",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "new_surfacerust",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tail Damage (Exchange Vehicles)",
+    "Name": "new_new_exchangevehicle_taildamage",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_taildamage",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "new_taildamage",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Owner",
+    "Name": "new_owner",
+    "OptionSetInfoNameMapping": {
+      "100000000": "First",
+      "100000001": "Second",
+      "100000002": "Third",
+      "100000003": "Fourth",
+      "100000004": "More"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_owner",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_owner",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Registration Type",
+    "Name": "new_registrationtype",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Individual",
+      "100000001": "Corporate",
+      "100000002": "Taxi"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_registrationtype",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "new_registrationtype",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  }
+]
