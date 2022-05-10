@@ -1115,6 +1115,77 @@ AddExchangeVehicleScreen As screen:
                 Y: =DataCardKey101.Y
                 ZIndex: =4
 
+        Lead_DataCard2 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_Lead"
+            Default: =ThisItem.Lead
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Exchange Vehicles'],DataSourceInfo.DisplayName,"new_Lead")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue60.Selected
+            Width: =640
+            X: =0
+            Y: =16
+            ZIndex: =1
+
+            DataCardKey65 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue60 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =ExchangeLeadParam
+                DisplayFields: =["fullname"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Exchange Vehicles'].new_Lead)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["fullname"]
+                SearchItems: =Search(Choices([@'Exchange Vehicles'].new_Lead),DataCardValue60.SearchText,"fullname")
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey65.Y + DataCardKey65.Height + 5
+                ZIndex: =2
+
+            ErrorMessage87 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue60.Y + DataCardValue60.Height
+                ZIndex: =3
+
+            StarVisible87 As label:
+                Align: =Align.Center
+                Height: =DataCardKey65.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey65.Y
+                ZIndex: =4
+
         "'Address Line1_DataCard2' As typedDataCard.textualEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="new_addressline1"
@@ -1128,7 +1199,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue62.Text
             Width: =640
             X: =0
-            Y: =16
+            Y: =17
             ZIndex: =1
 
             DataCardKey67 As label:
@@ -1144,7 +1215,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue62 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =ExchangeLeadParam.'Street 1'
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1201,7 +1272,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue64.Text
             Width: =640
             X: =0
-            Y: =17
+            Y: =18
             ZIndex: =1
 
             DataCardKey70 As label:
@@ -1217,7 +1288,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue64 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =ExchangeLeadParam.'Street 2'
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1274,7 +1345,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue66.Text
             Width: =640
             X: =0
-            Y: =18
+            Y: =19
             ZIndex: =1
 
             DataCardKey72 As label:
@@ -1290,7 +1361,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue66 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =ExchangeLeadParam.'Street 3'
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1347,7 +1418,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue67.Text
             Width: =640
             X: =0
-            Y: =19
+            Y: =20
             ZIndex: =1
 
             DataCardKey73 As label:
@@ -1363,7 +1434,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue67 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =ExchangeLeadParam.City.Name
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1420,7 +1491,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue77.Text
             Width: =640
             X: =0
-            Y: =20
+            Y: =21
             ZIndex: =1
 
             DataCardKey91 As label:
@@ -1436,7 +1507,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue77 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =ExchangeLeadParam.'ZIP/Postal Code'
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1493,7 +1564,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue81.Text
             Width: =640
             X: =0
-            Y: =21
+            Y: =22
             ZIndex: =1
 
             DataCardKey95 As label:
@@ -1509,7 +1580,7 @@ AddExchangeVehicleScreen As screen:
 
             DataCardValue81 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
+                Default: =ExchangeLeadParam.'State/Province'
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
@@ -1565,7 +1636,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue61.Attachments
             Width: =640
             X: =0
-            Y: =22
+            Y: =23
             ZIndex: =1
 
             DataCardKey66 As label:

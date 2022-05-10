@@ -10,7 +10,7 @@ EditExchangeVehicleScreen As screen:
     Icon1_20 As icon.BackArrow:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.BackArrow
-        OnSelect: =Back()
+        OnSelect: =Navigate(ExchangeInventoryScreen);
         X: =13
         Y: =9
         ZIndex: =3

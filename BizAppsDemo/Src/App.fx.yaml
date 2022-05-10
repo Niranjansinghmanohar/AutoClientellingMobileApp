@@ -45,6 +45,13 @@ App As appinfo:
                     Icon: Icon.Money,
                     Screen: ExchangeInventoryScreen,
                     Image: 'exchangevehicle (2)'
+                },
+                {
+                    ID: "7",
+                    Title: "INCENTIVE",
+                    Icon: Icon.Money,
+                    Screen: ExchangeInventoryScreen,
+                    Image: 'incentive-removebg-preview'
                 }/*,
                 {
                     ID: "6",

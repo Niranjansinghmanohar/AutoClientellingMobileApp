@@ -1648,6 +1648,10 @@ LeadDetailScreen As screen:
                 ExchangeContactParam,
                 FormLeadItem.'Parent Contact for lead'
             );
+            Set(
+                ExchangeLeadParam,
+                FormLeadItem
+            );
             ResetForm(Form12);
             Navigate(AddExchangeVehicleScreen);
         Size: =24
@@ -1696,7 +1700,14 @@ LeadDetailScreen As screen:
             AccessibleLabel: =Self.Tooltip
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: |
+                =Select(Parent);
+                Set(
+                    EditExchangeVehicleItem,
+                    ThisItem
+                );
+                ResetForm(Form12_1);
+                Navigate(EditExchangeVehicleScreen);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
