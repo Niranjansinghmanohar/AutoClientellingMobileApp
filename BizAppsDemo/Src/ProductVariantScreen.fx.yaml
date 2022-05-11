@@ -23,6 +23,7 @@ ProductVariantScreen As screen:
         Height: =118
         Items: =MenuItems
         OnSelect: =Navigate(ThisItem.Screen)
+        ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =Self.Height

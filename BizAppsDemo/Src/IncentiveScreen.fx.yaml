@@ -31,6 +31,7 @@ IncentiveScreen As screen:
         Height: =117
         Items: =MenuItems
         OnSelect: =Navigate(ThisItem.Screen)
+        ShowNavigation: =true
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =Self.Height + 10
