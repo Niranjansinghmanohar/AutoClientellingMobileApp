@@ -188,7 +188,7 @@ IncentiveScreen As screen:
             DisplayMode: =DisplayMode.View
             GridStyle: =GridStyle.All
             Height: =248
-            ItemColorSet: =[Green,Red]
+            ItemColorSet: =[LightGreen,Orange]
             Items: =Targets
             NumberOfSeries: =2
             SeriesAxisMax: =2500000

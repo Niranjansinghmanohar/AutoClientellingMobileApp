@@ -938,7 +938,7 @@ EditExchangeVehicleScreen As screen:
                 ZIndex: =4
 
             DataCardValue80_1 As toggleSwitch:
-                Default: =If(ThisItem.'Scratches'='Scratches (Exchange Vehicles)'.Yes,true,false)
+                Default: =If(ThisItem.Scratches='Scratches (Exchange Vehicles)'.Yes,true,false)
                 FalseText: ="No"
                 Height: =49
                 Size: =21
