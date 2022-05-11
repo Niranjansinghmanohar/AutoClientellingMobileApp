@@ -765,7 +765,7 @@ EditExchangeVehicleScreen As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue83_1.Selected.Value
+            Update: =If(DataCardValue83_1.Value,'Tail Damage (Exchange Vehicles)'.Yes,'Tail Damage (Exchange Vehicles)'.No)
             Width: =640
             X: =0
             Y: =11
@@ -781,25 +781,6 @@ EditExchangeVehicleScreen As screen:
                 X: =30
                 Y: =10
                 ZIndex: =1
-
-            DataCardValue83_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                IsSearchable: =false
-                Items: =Choices('Tail Damage (Exchange Vehicles)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey97_1.Y + DataCardKey97_1.Height + 5
-                ZIndex: =2
 
             ErrorMessage96_1 As label:
                 AutoHeight: =true
@@ -828,6 +809,17 @@ EditExchangeVehicleScreen As screen:
                 Y: =DataCardKey97_1.Y
                 ZIndex: =4
 
+            DataCardValue83_1 As toggleSwitch:
+                Default: =If(ThisItem.'Tail Damage'='Tail Damage (Exchange Vehicles)'.Yes,true,false)
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
         "'Surface Rust_DataCard1_1' As typedDataCard.comboBoxOptionSetSingleEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="new_surfacerust"
@@ -837,7 +829,7 @@ EditExchangeVehicleScreen As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue82_1.Selected.Value
+            Update: =If(DataCardValue82_1.Value,'Surface Rust (Exchange Vehicles)'.Yes,'Surface Rust (Exchange Vehicles)'.No)
             Width: =640
             X: =0
             Y: =12
@@ -853,25 +845,6 @@ EditExchangeVehicleScreen As screen:
                 X: =30
                 Y: =10
                 ZIndex: =1
-
-            DataCardValue82_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                IsSearchable: =false
-                Items: =Choices('Surface Rust (Exchange Vehicles)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey96_1.Y + DataCardKey96_1.Height + 5
-                ZIndex: =2
 
             ErrorMessage95_1 As label:
                 AutoHeight: =true
@@ -900,6 +873,17 @@ EditExchangeVehicleScreen As screen:
                 Y: =DataCardKey96_1.Y
                 ZIndex: =4
 
+            DataCardValue82_1 As toggleSwitch:
+                Default: =If(ThisItem.'Surface Rust'='Surface Rust (Exchange Vehicles)'.Yes,true,false)
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
         Scratches_DataCard1_1 As typedDataCard.comboBoxOptionSetSingleEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="new_scratches"
@@ -909,7 +893,7 @@ EditExchangeVehicleScreen As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue80_1.Selected.Value
+            Update: =If(DataCardValue80_1.Value,'Scratches (Exchange Vehicles)'.Yes,'Scratches (Exchange Vehicles)'.No)
             Width: =640
             X: =0
             Y: =13
@@ -925,25 +909,6 @@ EditExchangeVehicleScreen As screen:
                 X: =30
                 Y: =10
                 ZIndex: =1
-
-            DataCardValue80_1 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =[Parent.Default]
-                DisplayFields: =["Value"]
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                IsSearchable: =false
-                Items: =Choices('Scratches (Exchange Vehicles)')
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["Value"]
-                SearchItems: =[]
-                SelectMultiple: =false
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey94_1.Y + DataCardKey94_1.Height + 5
-                ZIndex: =2
 
             ErrorMessage93_1 As label:
                 AutoHeight: =true
@@ -971,6 +936,17 @@ EditExchangeVehicleScreen As screen:
                 Wrap: =false
                 Y: =DataCardKey94_1.Y
                 ZIndex: =4
+
+            DataCardValue80_1 As toggleSwitch:
+                Default: =If(ThisItem.'Scratches'='Scratches (Exchange Vehicles)'.Yes,true,false)
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =14
+                ZIndex: =5
 
         "'Expected Selling Price_DataCard1_1' As typedDataCard.currencyEditCard":
             BorderStyle: =BorderStyle.Solid
