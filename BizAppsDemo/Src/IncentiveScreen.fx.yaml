@@ -87,7 +87,7 @@ IncentiveScreen As screen:
         Align: =Align.Center
         FontWeight: =FontWeight.Bold
         Height: =133
-        Size: =40
+        Size: =35
         Text: ="30 % (MTD)"
         Width: =329
         X: =164
