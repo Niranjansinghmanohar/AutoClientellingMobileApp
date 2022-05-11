@@ -333,6 +333,7 @@ AddExchangeVehicleScreen As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue73.Selected.Value
+            Visible: =false
             Width: =640
             X: =0
             Y: =5
@@ -478,6 +479,7 @@ AddExchangeVehicleScreen As screen:
             MaxLength: =DataSourceInfo([@'Exchange Vehicles'], DataSourceInfo.MaxLength, "new_version")
             Required: =false
             Update: =DataCardValue84.Text
+            Visible: =false
             Width: =640
             X: =0
             Y: =7
@@ -620,8 +622,9 @@ AddExchangeVehicleScreen As screen:
             DisplayName: =DataSourceInfo([@'Exchange Vehicles'],DataSourceInfo.DisplayName,"new_owner")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =true
+            Required: =false
             Update: =DataCardValue85.Selected.Value
+            Visible: =false
             Width: =640
             X: =0
             Y: =9
@@ -1180,7 +1183,7 @@ AddExchangeVehicleScreen As screen:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Address"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -1244,6 +1247,7 @@ AddExchangeVehicleScreen As screen:
             MaxLength: =DataSourceInfo([@'Exchange Vehicles'], DataSourceInfo.MaxLength, "new_addressline2")
             Required: =false
             Update: =DataCardValue64.Text
+            Visible: =false
             Width: =640
             X: =0
             Y: =18
@@ -1317,6 +1321,7 @@ AddExchangeVehicleScreen As screen:
             MaxLength: =DataSourceInfo([@'Exchange Vehicles'], DataSourceInfo.MaxLength, "new_addressline3")
             Required: =false
             Update: =DataCardValue66.Text
+            Visible: =false
             Width: =640
             X: =0
             Y: =19
