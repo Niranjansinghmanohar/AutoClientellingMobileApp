@@ -6722,6 +6722,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "IncentiveScreen.ColumnChart1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "IncentiveScreen.ColumnChart1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "IncentiveScreen",
+                "type": "IncentiveScreen.ColumnChart1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "AddExchangeVehicleScreen.Form12.'Surface Rust_DataCard1'.DataCardValue82.AccessibleLabel"
                 }
               ],
