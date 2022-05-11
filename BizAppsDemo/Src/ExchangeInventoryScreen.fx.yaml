@@ -46,9 +46,10 @@ ExchangeInventoryScreen As screen:
             Height: =56
             Icon: =Icon.ChevronRight
             OnSelect: =Select(Parent);Set(EditExchangeVehicleItem,ThisItem);ResetForm(Form12_1);Navigate(EditExchangeVehicleScreen);
+            Visible: =If(ThisItem.'Sold for Amount'<>Blank(),false,true)
             Width: =38
-            X: =590
-            Y: =46
+            X: =580
+            Y: =16
             ZIndex: =13
 
         Label29 As label:
@@ -81,6 +82,24 @@ ExchangeInventoryScreen As screen:
             X: =160
             Y: =102
             ZIndex: =16
+
+        Icon22 As icon.TrendingUpwards:
+            Icon: =Icon.TrendingUpwards
+            OnSelect: =Select(Parent); Set(AuctionItem,ThisItem); Navigate(ExchangeVehicleAuctionScreen);
+            Visible: =If(ThisItem.'Sold for Amount'<>Blank(),false,true)
+            X: =560
+            Y: =77
+            ZIndex: =17
+
+        Image15 As image:
+            Height: =64
+            Image: =soldicon
+            OnSelect: =Select(Parent)
+            Visible: =If(ThisItem.'Sold for Amount'<>Blank(),true,false)
+            Width: =61
+            X: =563
+            Y: =77
+            ZIndex: =18
 
     Label4_22 As label:
         Align: =Align.Center

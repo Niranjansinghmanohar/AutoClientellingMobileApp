@@ -52,6 +52,8 @@
       "new_registrationtype": "Registration Type",
       "new_scratches": "Scratches",
       "new_Seller": "Seller",
+      "new_soldforamount": "Sold for Amount",
+      "new_soldforamount_base": "Sold for Amount (Base)",
       "new_state": "State",
       "new_surfacerust": "Surface Rust",
       "new_taildamage": "Tail Damage",
