@@ -1753,7 +1753,7 @@ AddExchangeVehicleScreen As screen:
                 Notify(
                     "Success",
                     NotificationType.Success
-                );Set(EditExchangeVehicleItem,Form12.LastSubmit);ResetForm(Form12_1);Navigate(EditExchangeVehicleScreen),
+                );Set(EditExchangeVehicleItem,LookUp('Exchange Vehicles','Exchange Vehicle'= Form12.LastSubmit.'Exchange Vehicle'));ResetForm(Form12_1);Navigate(EditExchangeVehicleScreen),
                 Notify(
                     First(Errors('Exchange Vehicles')).Message,
                     NotificationType.Error
