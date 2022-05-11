@@ -22,8 +22,10 @@
       "new_addressline1": "Address Line1",
       "new_addressline2": "Address Line 2",
       "new_addressline3": "Address Line 3",
+      "new_chippedpaint": "Chipped Paint",
       "new_city": "City",
       "new_colour": "Colour",
+      "new_dents": "Dents",
       "new_exchangevehicle_Annotations": "Notes",
       "new_exchangevehicle_AsyncOperations": "System Jobs",
       "new_exchangevehicle_BulkDeleteFailures": "Bulk Delete Failures",
@@ -110,6 +112,46 @@
     "Type": "OptionSetInfo"
   },
   {
+    "DisplayName": "Chipped Paint (Exchange Vehicles)",
+    "Name": "new_exchangevehicle_new_chippedpaint",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_chippedpaint",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "new_chippedpaint",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Dents (Exchange Vehicles)",
+    "Name": "new_exchangevehicle_new_dents",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "new_dents",
+        "OptionSetReferenceEntityName": "Exchange Vehicles"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "new_dents",
+    "RelatedEntityName": "Exchange Vehicles",
+    "Type": "OptionSetInfo"
+  },
+  {
     "DisplayName": "Status (Exchange Vehicles)",
     "Name": "new_exchangevehicle_statecode",
     "OptionSetInfoNameMapping": {
@@ -134,6 +176,7 @@
     "Name": "new_exchangevehicle_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
+      "100000000": "Sold",
       "2": "Inactive"
     },
     "OptionSetIsBooleanValued": false,

@@ -118,7 +118,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue72.Text
             Width: =640
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =1
 
             DataCardKey82 As label:
@@ -766,7 +766,7 @@ AddExchangeVehicleScreen As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Exchange Vehicles'],DataSourceInfo.DisplayName,"new_taildamage")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =78
+            Height: =55
             Required: =false
             Update: =If(DataCardValue83.Value, 'Tail Damage (Exchange Vehicles)'.Yes, 'Tail Damage (Exchange Vehicles)'.No)
             Width: =640
@@ -829,7 +829,7 @@ AddExchangeVehicleScreen As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Exchange Vehicles'],DataSourceInfo.DisplayName,"new_surfacerust")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =87
+            Height: =59
             Required: =false
             Update: =If(DataCardValue82.Value,'Surface Rust (Exchange Vehicles)'.Yes,'Surface Rust (Exchange Vehicles)'.No)
             Width: =640
@@ -882,7 +882,7 @@ AddExchangeVehicleScreen As screen:
                 TrueText: ="Yes"
                 Width: =154
                 X: =456
-                Y: =19
+                Y: =9
                 ZIndex: =5
 
         Scratches_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
@@ -948,6 +948,132 @@ AddExchangeVehicleScreen As screen:
                 Y: =14
                 ZIndex: =5
 
+        "'Chipped Paint_DataCard1' As typedDataCard.comboBoxOptionSetSingleEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_chippedpaint"
+            Default: =ThisItem.'Chipped Paint'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Exchange Vehicles'],DataSourceInfo.DisplayName,"new_chippedpaint")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =If(DataCardValue76.Value, 'Chipped Paint (Exchange Vehicles)'.Yes,'Chipped Paint (Exchange Vehicles)'.No)
+            Width: =640
+            X: =0
+            Y: =14
+            ZIndex: =1
+
+            DataCardKey88 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage99 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue76.Y + DataCardValue76.Height
+                ZIndex: =3
+
+            StarVisible99 As label:
+                Align: =Align.Center
+                Height: =DataCardKey88.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey88.Y
+                ZIndex: =4
+
+            DataCardValue76 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
+        Dents_DataCard1 As typedDataCard.comboBoxOptionSetSingleEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="new_dents"
+            Default: =ThisItem.Dents
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Exchange Vehicles'],DataSourceInfo.DisplayName,"new_dents")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =If(DataCardValue86.Value,'Dents (Exchange Vehicles)'.Yes,'Dents (Exchange Vehicles)'.No)
+            Width: =640
+            X: =0
+            Y: =15
+            ZIndex: =1
+
+            DataCardKey100 As label:
+                AutoHeight: =true
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage101 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue86.Y + DataCardValue86.Height
+                ZIndex: =3
+
+            StarVisible101 As label:
+                Align: =Align.Center
+                Height: =DataCardKey100.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey100.Y
+                ZIndex: =4
+
+            DataCardValue86 As toggleSwitch:
+                FalseText: ="No"
+                Height: =49
+                Size: =21
+                TrueText: ="Yes"
+                Width: =154
+                X: =456
+                Y: =10
+                ZIndex: =5
+
         "'Expected Selling Price_DataCard1' As typedDataCard.currencyEditCard":
             BorderStyle: =BorderStyle.Solid
             DataField: ="new_expectedsellingprice"
@@ -960,7 +1086,7 @@ AddExchangeVehicleScreen As screen:
             Update: =Value(DataCardValue70.Text)
             Width: =640
             X: =0
-            Y: =14
+            Y: =16
             ZIndex: =1
 
             DataCardKey80 As label:
@@ -1032,7 +1158,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue87.Selected
             Width: =640
             X: =0
-            Y: =15
+            Y: =17
             ZIndex: =1
 
             DataCardKey101 As label:
@@ -1104,7 +1230,7 @@ AddExchangeVehicleScreen As screen:
             Visible: =false
             Width: =640
             X: =0
-            Y: =16
+            Y: =18
             ZIndex: =1
 
             DataCardKey65 As label:
@@ -1176,7 +1302,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue62.Text
             Width: =640
             X: =0
-            Y: =17
+            Y: =19
             ZIndex: =1
 
             DataCardKey67 As label:
@@ -1250,7 +1376,7 @@ AddExchangeVehicleScreen As screen:
             Visible: =false
             Width: =640
             X: =0
-            Y: =18
+            Y: =20
             ZIndex: =1
 
             DataCardKey70 As label:
@@ -1324,7 +1450,7 @@ AddExchangeVehicleScreen As screen:
             Visible: =false
             Width: =640
             X: =0
-            Y: =19
+            Y: =21
             ZIndex: =1
 
             DataCardKey72 As label:
@@ -1397,7 +1523,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue67.Text
             Width: =640
             X: =0
-            Y: =20
+            Y: =22
             ZIndex: =1
 
             DataCardKey73 As label:
@@ -1470,7 +1596,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue77.Text
             Width: =640
             X: =0
-            Y: =21
+            Y: =23
             ZIndex: =1
 
             DataCardKey91 As label:
@@ -1543,7 +1669,7 @@ AddExchangeVehicleScreen As screen:
             Update: =DataCardValue81.Text
             Width: =640
             X: =0
-            Y: =22
+            Y: =24
             ZIndex: =1
 
             DataCardKey95 As label:
@@ -1616,7 +1742,7 @@ AddExchangeVehicleScreen As screen:
             Visible: =false
             Width: =640
             X: =0
-            Y: =23
+            Y: =25
             ZIndex: =1
 
             DataCardKey66 As label:
@@ -1688,7 +1814,7 @@ AddExchangeVehicleScreen As screen:
             Visible: =false
             Width: =640
             X: =0
-            Y: =1
+            Y: =2
             ZIndex: =9
 
             DataCardKey64 As label:
