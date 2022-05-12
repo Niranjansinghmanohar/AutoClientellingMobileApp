@@ -2,7 +2,7 @@ ExchangeVehicleAuctionScreen As screen:
     BackgroundImage: =
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =ClearCollect(AuctionBids,{Value:40000,BidOn:"10/05/2022 11:11:00",Duration: 6000000},{Value:39000,BidOn:"09/05/2022 22:11:00",Duration: 4000000},{Value:37600,BidOn:"09/05/2022 11:11:00", Duration: 10000});
+        =ClearCollect(AuctionBids,{Value:40000,BidOn:"10/05/2022 11:11:00",Duration: 6000000},{Value:39000,BidOn:"09/05/2022 22:11:00",Duration: 4000000},{Value:37600,BidOn:"09/05/2022 11:11:00", Duration: 5000});
         Reset(Gallery16);
 
     Rectangle1_23 As rectangle:
