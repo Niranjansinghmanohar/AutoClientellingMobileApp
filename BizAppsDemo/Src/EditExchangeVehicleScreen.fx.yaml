@@ -1069,7 +1069,7 @@ EditExchangeVehicleScreen As screen:
                 ZIndex: =4
 
             DataCardValue89 As toggleSwitch:
-                Default: =If(ThisItem.'Dents'='Dents (Exchange Vehicles)'.Yes,true,false)
+                Default: =If(ThisItem.Dents='Dents (Exchange Vehicles)'.Yes,true,false)
                 FalseText: ="No"
                 Height: =49
                 Size: =21

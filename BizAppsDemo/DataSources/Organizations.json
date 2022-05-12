@@ -1558,7 +1558,7 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Relevance search enabled automatically by Dataverse (Organizations)",
+    "DisplayName": "Indicates whether Sales Mobile Preview has been enabled for the organization (Organizations)",
     "Name": "organization_featureenabled",
     "OptionSetInfoNameMapping": {
       "0": "No",
