@@ -2,7 +2,7 @@ ExchangeVehicleAuctionScreen As screen:
     BackgroundImage: =
     Fill: =RGBA(255, 255, 255, 1)
     OnVisible: |-
-        =ClearCollect(AuctionBids,{Value:40000,BidOn:"10/05/2022 11:11:00",Duration: 6000000},{Value:39000,BidOn:"09/05/2022 22:11:00",Duration: 4000000},{Value:37600,BidOn:"09/05/2022 11:11:00", Duration: 2000000});
+        =ClearCollect(AuctionBids,{Value:40000,BidOn:"10/05/2022 11:11:00",Duration: 6000000},{Value:39000,BidOn:"09/05/2022 22:11:00",Duration: 4000000},{Value:37600,BidOn:"09/05/2022 11:11:00", Duration: 10000});
         Reset(Gallery16);
 
     Rectangle1_23 As rectangle:
@@ -46,21 +46,22 @@ ExchangeVehicleAuctionScreen As screen:
             ZIndex: =5
 
         Label37 As label:
-            Height: =70
+            FontWeight: =FontWeight.Semibold
+            Height: =66
             OnSelect: =Select(Parent)
             Size: =25
             Text: ="Rs. " & ThisItem.Value
-            Width: =560
-            X: =60
-            Y: =29
+            Width: =216
+            X: =36
+            Y: =38
             ZIndex: =6
 
         Icon23 As icon.Check:
             Icon: =Icon.Check
             OnSelect: =Select(Parent)
             Visible: =If(ThisItem.IsSelected,true,false)
-            X: =544
-            Y: =60
+            X: =560
+            Y: =46
             ZIndex: =8
 
         Timer1 As timer:
@@ -69,21 +70,36 @@ ExchangeVehicleAuctionScreen As screen:
             DisplayMode: =DisplayMode.View
             Duration: =ThisItem.Duration
             Fill: =RGBA(204, 204, 204, 1)
-            Height: =35
+            Height: =50
             OnSelect: =Select(Parent)
+            Size: =20
             Text: |-
                 =//Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")
                 Text(Time(0, 0, (Timer1.Duration-Timer1.Value)/1000), "hh:mm:ss")
+            Visible: =If(Self.Duration-Self.Value>0,true,false)
             Width: =156
-            X: =60
-            Y: =105
+            X: =306
+            Y: =46
             ZIndex: =9
+
+        Label34 As label:
+            Align: =Align.Center
+            Height: =50
+            OnSelect: =Select(Parent)
+            Size: =16
+            Text: ="Bid Expired"
+            Visible: =If(Timer1.Duration-Timer1.Value>0,false,true)
+            Width: =156
+            X: =306
+            Y: =46
+            ZIndex: =10
 
     Button20 As button:
         Fill: =RGBA(141, 198, 63, 1)
         Height: =70
         OnSelect: |
-            =Patch('Exchange Vehicles',AuctionItem,{'Sold for Amount':Gallery16.Selected.Value});
+            =If(Gallery16.Selected.Timer1.Duration-Gallery16.Selected.Timer1.Value>0,
+            Patch('Exchange Vehicles',AuctionItem,{'Sold for Amount':Gallery16.Selected.Value});
             If(
                 IsEmpty(Errors('Exchange Vehicles')),
                 Notify(
@@ -94,7 +110,7 @@ ExchangeVehicleAuctionScreen As screen:
                     First(Errors('Exchange Vehicles')).Message,
                     NotificationType.Error
                 )
-            );
+            ),Notify("Bid no longer valid",NotificationType.Error));
         Size: =24
         Text: ="Accept Offer"
         Width: =280
