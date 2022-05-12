@@ -200,9 +200,9 @@ IncentiveScreen As screen:
             ItemColorSet: =LineChart1.ItemColorSet
             Items: =LineChart1.SeriesLabels
             Size: =18
-            Width: =512
-            X: =64
-            Y: =360
+            Width: =262
+            X: =188
+            Y: =361
             ZIndex: =26
 
     Rectangle3_2 As rectangle:
