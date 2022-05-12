@@ -178,8 +178,9 @@ IncentiveScreen As screen:
 
         Title11 As label:
             Align: =Align.Center
-            Height: =16
-            Text: ="Target vs Actual"
+            Height: =36
+            Size: =18
+            Text: ="Actual vs Target (Monthly Achievement)"
             Width: =640
             Y: =73
             ZIndex: =24
@@ -187,7 +188,7 @@ IncentiveScreen As screen:
         LineChart1 As lineChart:
             Font: =Font.'Open Sans'
             Height: =261
-            ItemColorSet: =[LightGreen,Orange]
+            ItemColorSet: =[Orange,LightGreen]
             Items: =Targets
             NumberOfSeries: =2
             Width: =640
